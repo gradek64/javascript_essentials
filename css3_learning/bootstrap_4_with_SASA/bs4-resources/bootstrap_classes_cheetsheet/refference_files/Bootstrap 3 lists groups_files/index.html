@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://live-ssl.cdn.spongecell.com/zipped_animation/assets/1605415/original/160x600/index.html?jlw5juco -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Disney Template 1</title>
+
+        <link href="./css" rel="stylesheet" type="text/css">
+         <script type="text/javascript" src="./spongeapi.min.js"></script>
+        <script src="./jquery.min(1).js"></script>
+        <script src="./TweenMax.min.js"></script>
+        <script src="./MorphSVGPlugin.min.js"></script>
+        <script src="./pixi.min.js"></script>
+        <script src="./pixi-particles.min.js"></script>
+        <script src="./particles.js"></script>
+        <script src="./SplitText.min.js"></script>
+
+        <style id="myStyleSheet">
+
+            html {
+                box-sizing: border-box;
+            }
+
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
+            img {
+                border: none 0;
+            }
+
+            body {
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0px;pointer-events:none;cursor:pointer; cursor:hand;
+
+            }
+
+            /* FONTS */
+            .default {
+                font-size: 16px;
+                display: inline-block;
+                 margin-top: 10px;
+            }
+            .small {
+                font-size: 12px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .big {
+                font-size: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .bigger {
+                font-size: 24px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .huge {
+                font-size: 28px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .default_nobreak {
+                font-size: 16px;
+                display: inline-block;
+            }
+            .small_nobreak {
+                font-size: 12px;
+                display: inline-block;
+            }
+            .big_nobreak {
+                font-size: 20px;
+                display: inline-block;
+            }
+            .bigger_nobreak {
+                font-size: 24px;
+                display: inline-block;
+            }
+            .huge_nobreak {
+                font-size: 28px;
+                display: inline-block;
+            }
+
+
+
+
+            .thin {
+                margin-top: 18px;
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: none;
+                display: inline-block;
+            }
+            .clickthrough {
+                margin-top: 18px;
+                font-size: 14px;
+                font-weight: 300;
+                text-transform: none;
+                display: inline-block;
+                text-decoration: underline;
+                pointer-events:auto !important;
+                cursor: pointer; cursor: hand;
+            }
+
+            /* TXTS */
+            #copy_1, #copy_2, #copy_3, #copy_4, #copy_5, #copy_6 {
+                top:50px;
+                width: 90%;
+                left:5%;
+                text-align: center;
+                display: inline-block;
+                position:absolute;
+                color:white;
+            }
+
+             #legal_copy{
+                bottom:3px;
+                width: 90%;
+                left:3px;
+                font-family: arial;
+                text-transform: none;
+                text-align: left;
+                position:absolute;
+                color:white;
+                font-size:7px;
+                opacity:0;
+            }
+            #copyright_copy{
+                bottom:0px;
+                width: 200px;
+                left:147px;
+                font-family: arial;
+                text-transform: none;
+                text-align: left;
+                position:absolute;
+                color:white;
+
+                font-size:9px;
+                transform: rotate(-90deg);
+                transform-origin: left top 0;
+            }
+
+            #copy_1__1, #copy_2__1, #copy_3__1, #copy_4__1, #copy_5__1, #copy_6__1 {
+                opacity:0;
+            }
+            #copy_1__2, #copy_2__2, #copy_3__2, #copy_4__2, #copy_5__2, #copy_6__2 {
+                opacity:0;
+            }
+            #copy_1__3, #copy_2__3, #copy_3__3, #copy_4__3, #copy_5__3, #copy_6__3 {
+                opacity:0;
+            }
+            #copy_1__4, #copy_2__4, #copy_3__4, #copy_4__4, #copy_5__4, #copy_6__4 {
+                opacity:0;
+            }
+            #copy_1__5, #copy_2__5, #copy_3__5, #copy_4__5, #copy_5__5, #copy_6__5 {
+                opacity:0;
+            }
+            #copy_1__6, #copy_2__6, #copy_3__6, #copy_4__6, #copy_5__6, #copy_6__6 {
+                opacity:0;
+            }
+            .plus {
+                font-size: 70px;
+                font-weight: 300;
+                display: block;
+                margin-top:-20px;
+                margin-bottom:-20px;
+            }
+
+            .cta{
+                padding: 8px 12px;
+                background-color: #526ad0;
+                color:white;
+                font-size: 15px;
+                text-align: center;
+                cursor: pointer;
+                display: inline-block;
+                bottom:15px;
+
+            }
+            #playButton {
+                position:absolute;
+                bottom:17px;
+                left:5px;
+                background-image: url('assets/pause.png');
+                width:31px;
+                height:31px;
+                pointer-events: auto !important;
+                display:none;
+            }
+            
+            #replayButton {
+                position:absolute;
+                left:37px;
+                bottom:17px;
+                background-image: url('assets/refresh.png');
+                width:31px;
+                height:31px;
+                pointer-events: auto !important;
+                display:none;
+            }
+            #ctaMask {
+                position:absolute;
+                overflow: hidden;
+                text-align: center;
+                width:80%;
+                left:10%;
+                bottom:60px;
+            }
+            #blur_image {
+                pointer-events:auto !important;
+                cursor: pointer; cursor: hand;
+                position:absolute;
+                overflow: hidden;
+                text-align: center;
+                width:100%;
+                height:100%;
+                top:0px;
+                opacity:0;
+            }
+            #offer_image {
+                position:absolute;
+                width:160px !important;
+                height:600px !important;
+                top:0px !important;
+                left:0px !important;
+                opacity:0;
+            }
+            #small_image {
+                overflow: hidden;
+                text-align: center;
+                width:144px;
+                height:144px;
+                opacity:0;
+                background-image: url('image/example.png');
+                margin:-15px 0px -45px 0px;
+                padding:0px;
+                left:0px;
+                display:inline-block;
+            }
+            #logo_img {
+                position:absolute;
+                text-align: center;
+                left:10px;
+                top:10px;
+                width:140px;
+                height:auto;
+            }
+
+            #myVideo {
+                width:160px;
+                height:600px; 
+                left:0px;
+                top:0px;            
+
+                position:absolute;
+                overflow:hidden;
+
+            }
+            
+            #svg {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #castle__big {
+                visibility:hidden;
+            }
+            #bg_image {
+                position: absolute;
+                opacity:1 !important;
+            }
+             #container {
+                padding:0px;
+                margin:0px;
+                width: 160px;
+                height: 600px;
+                position: absolute;
+                overflow: hidden;
+                text-align: center;
+            }
+
+             #particlesEmitter {
+                position: absolute;
+                top: -900px;
+                left: -900px;
+            }
+
+            #countdown {text-align:center;}
+            #countdown__time {position: absolute; width: 100%; text-align: center; color: white; }
+
+
+            #countdown__title { position: absolute; width: 100%; text-align: center; color: white; bottom: 430px; font-size: 16px;  opacity:0;}
+            #countdown__subtitle {position: absolute; width: 100%; text-align: center; color: white;  top: 280px; font-size: 16px;  opacity:0;}
+            #countdown__time { top: 192px; }
+            #countdown__time > div span { font-size: 38px; font-weight: 400;  }
+            #countdown__days, #countdown__hours, #countdown__minutes { display: inline-block; line-height: 1.2; font-size: 12px; font-weight: 300;  opacity:0; }
+            #countdown__hours { padding-left: 10px; padding-right: 10px;}
+
+        </style>
+    </head>
+    <body>
+
+
+        <div id="container">
+        <div id="background__gradient" style="z-index: 0; position: absolute; width: 160px; height: 600px; background: linear-gradient(rgb(54, 101, 166) 0%, rgb(20, 36, 59) 100%);"></div>
+        <div id="bg_image" style="clip-path:url(#castle); width:160px; height:600px;opacity:1; bottom:0;"><img alt="" id="promo_img_160x600" src="./R2D2_160x600.jpg" style="width: 160px; height: 1800px; bottom: 0px; left: 0px; margin-top: -10px;" source="https://signal-ssl.cdn.spongecell.com/campaigns/23810/signal_processors/7144/images/3300488/R2D2_160x600.jpg"></div>
+        <div id="video_overlay" style="clip-path:url(#castle); width:160px; height:600px;opacity:1; bottom:0;"><img alt="" id="video_overlay_160x600" src="./300_250_300_250_overlay.png" style="width:160px; height:600px; bottom:0px;  left:0px;" source="https://signal-ssl.cdn.spongecell.com/campaigns/23810/signal_processors/7144/images/3300465/300_250_300_250_overlay.png"></div>
+
+            <svg id="svg" version="1.1" width="160" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 160 600">     
+            <clippath id="castle" transform="scale(1)">
+            <path id="castle__small" transform="translate(-65,-40)" d="M 905.739 580.81 C 884.076 580.81 905.739 703.459 663.851 1027.74 C 663.851 1027.74 671.359 1065.613 724.58 1079.601 L 720.316 1134.017 L 634.683 1116.619 L 634.683 670.709 C 634.683 670.709 679.034 646.658 685.345 630.28 C 529.262 447.927 493.951 215.934 493.951 215.934 L 309.207 215.934 L 307.842 -322.431 L 307.842 -322.431 C 307.842 -284.391 338.206 -252.662 377.271 -252.662 C 415.31 -252.662 447.21 -283.366 447.21 -322.431 L 447.21 -322.431 L 447.21 -516.045 C 485.25 -527.472 480.133 -536.343 480.133 -536.343 C 418.039 -608.672 400.129 -718.696 389.041 -779.428 C 384.777 -802.626 368.4 -795.972 365.841 -784.374 C 357.143 -733.711 341.788 -641.256 297.268 -569.097 C 269.632 -641.256 246.943 -720.915 229.032 -802.115 L 192.698 -969.456 C 176.324 -1077.435 167.281 -1186.439 164.553 -1290.155 C 186.045 -1296.298 201.398 -1316.94 201.398 -1339.626 C 201.398 -1363.85 186.045 -1382.782 164.553 -1388.925 C 158.241 -1437.028 159.776 -1528.462 148.176 -1528.462 C 138.283 -1528.462 139.477 -1437.028 133.165 -1388.925 C 111.328 -1382.444 96.149 -1362.313 96.149 -1339.626 C 96.149 -1315.404 111.328 -1296.126 133.165 -1290.155 C 130.605 -1187.294 121.736 -1077.435 106.383 -969.456 L 71.754 -803.479 C 37.297 -649.1 -12.856 -505.982 -83.82 -396.978 C -83.82 -396.978 -87.741 -376.846 -7.738 -353.821 L -10.126 427.629 L -82.624 507.632 L -82.624 337.902 C -33.156 322.717 -39.297 313.507 -39.297 313.507 C -111.454 204.674 -142.159 32.383 -149.324 -44.721 C -160.582 -158.67 -157.851 -231.001 -173.205 -231.001 C -188.73 -231.001 -185.998 -158.67 -197.597 -44.721 C -205.105 32.383 -235.467 204.674 -307.625 313.507 C -307.625 313.507 -314.106 322.551 -264.467 337.902 L -264.467 747.985 C -442.216 437.693 -409.124 336.194 -440.511 336.194 C -478.722 336.194 -426.693 473.004 -722.996 917.716 C -722.996 917.716 -733.572 936.648 -652.035 959.507 L -677.282 1464.951 L -677.282 1734.815 L -88.596 1734.815 L -88.596 1571.395 C -88.596 1441.067 -41.855 1274.918 186.045 1167.282 C 413.945 1275.089 462.05 1441.067 462.05 1571.395 L 464.78 1710.93 L 1077.69 1710.93 L 1077.69 1334.624 C 1073.937 1171.202 1086.561 1080.964 1086.561 1080.964 C 1137.224 1068.341 1147.63 1029.109 1147.63 1029.109 C 905.739 703.459 927.062 580.81 905.739 580.81 Z" data-original="M 150.124 305.973 C 149.997 305.973 150.124 306.692 148.706 308.593 C 148.706 308.593 148.75 308.815 149.062 308.897 L 149.037 309.216 L 148.535 309.114 L 148.535 306.5 C 148.535 306.5 148.795 306.359 148.832 306.263 C 147.917 305.194 147.71 303.834 147.71 303.834 L 146.627 303.834 L 146.619 300.678 L 146.619 300.678 C 146.619 300.901 146.797 301.087 147.026 301.087 C 147.249 301.087 147.436 300.907 147.436 300.678 L 147.436 300.678 L 147.436 299.543 C 147.659 299.476 147.629 299.424 147.629 299.424 C 147.265 299 147.16 298.355 147.095 297.999 C 147.07 297.863 146.974 297.902 146.959 297.97 C 146.908 298.267 146.818 298.809 146.557 299.232 C 146.395 298.809 146.262 298.342 146.157 297.866 L 145.944 296.885 C 145.848 296.252 145.795 295.613 145.779 295.005 C 145.905 294.969 145.995 294.848 145.995 294.715 C 145.995 294.573 145.905 294.462 145.779 294.426 C 145.742 294.144 145.751 293.608 145.683 293.608 C 145.625 293.608 145.632 294.144 145.595 294.426 C 145.467 294.464 145.378 294.582 145.378 294.715 C 145.378 294.857 145.467 294.97 145.595 295.005 C 145.58 295.608 145.528 296.252 145.438 296.885 L 145.235 297.858 C 145.033 298.763 144.739 299.602 144.323 300.241 C 144.323 300.241 144.3 300.359 144.769 300.494 L 144.755 305.075 L 144.33 305.544 L 144.33 304.549 C 144.62 304.46 144.584 304.406 144.584 304.406 C 144.161 303.768 143.981 302.758 143.939 302.306 C 143.873 301.638 143.889 301.214 143.799 301.214 C 143.708 301.214 143.724 301.638 143.656 302.306 C 143.612 302.758 143.434 303.768 143.011 304.406 C 143.011 304.406 142.973 304.459 143.264 304.549 L 143.264 306.953 C 142.222 305.134 142.416 304.539 142.232 304.539 C 142.008 304.539 142.313 305.341 140.576 307.948 C 140.576 307.948 140.514 308.059 140.992 308.193 L 140.844 311.156 L 140.844 312.738 L 144.295 312.738 L 144.295 311.78 C 144.295 311.016 144.569 310.042 145.905 309.411 C 147.241 310.043 147.523 311.016 147.523 311.78 L 147.539 312.598 L 151.132 312.598 L 151.132 310.392 C 151.11 309.434 151.184 308.905 151.184 308.905 C 151.481 308.831 151.542 308.601 151.542 308.601 C 150.124 306.692 150.249 305.973 150.124 305.973 Z"></path>
+                    <path id="castle__big" d="M 905.739 580.81 C 884.076 580.81 905.739 703.459 663.851 1027.74 C 663.851 1027.74 671.359 1065.613 724.58 1079.601 L 720.316 1134.017 L 634.683 1116.619 L 634.683 670.709 C 634.683 670.709 679.034 646.658 685.345 630.28 C 529.262 447.927 493.951 215.934 493.951 215.934 L 309.207 215.934 L 307.842 -322.431 L 307.842 -322.431 C 307.842 -284.391 338.206 -252.662 377.271 -252.662 C 415.31 -252.662 447.21 -283.366 447.21 -322.431 L 447.21 -322.431 L 447.21 -516.045 C 485.25 -527.472 480.133 -536.343 480.133 -536.343 C 418.039 -608.672 400.129 -718.696 389.041 -779.428 C 384.777 -802.626 368.4 -795.972 365.841 -784.374 C 357.143 -733.711 341.788 -641.256 297.268 -569.097 C 269.632 -641.256 246.943 -720.915 229.032 -802.115 L 192.698 -969.456 C 176.324 -1077.435 167.281 -1186.439 164.553 -1290.155 C 186.045 -1296.298 201.398 -1316.94 201.398 -1339.626 C 201.398 -1363.85 186.045 -1382.782 164.553 -1388.925 C 158.241 -1437.028 159.776 -1528.462 148.176 -1528.462 C 138.283 -1528.462 139.477 -1437.028 133.165 -1388.925 C 111.328 -1382.444 96.149 -1362.313 96.149 -1339.626 C 96.149 -1315.404 111.328 -1296.126 133.165 -1290.155 C 130.605 -1187.294 121.736 -1077.435 106.383 -969.456 L 71.754 -803.479 C 37.297 -649.1 -12.856 -505.982 -83.82 -396.978 C -83.82 -396.978 -87.741 -376.846 -7.738 -353.821 L -10.126 427.629 L -82.624 507.632 L -82.624 337.902 C -33.156 322.717 -39.297 313.507 -39.297 313.507 C -111.454 204.674 -142.159 32.383 -149.324 -44.721 C -160.582 -158.67 -157.851 -231.001 -173.205 -231.001 C -188.73 -231.001 -185.998 -158.67 -197.597 -44.721 C -205.105 32.383 -235.467 204.674 -307.625 313.507 C -307.625 313.507 -314.106 322.551 -264.467 337.902 L -264.467 747.985 C -442.216 437.693 -409.124 336.194 -440.511 336.194 C -478.722 336.194 -426.693 473.004 -722.996 917.716 C -722.996 917.716 -733.572 936.648 -652.035 959.507 L -677.282 1464.951 L -677.282 1734.815 L -88.596 1734.815 L -88.596 1571.395 C -88.596 1441.067 -41.855 1274.918 186.045 1167.282 C 413.945 1275.089 462.05 1441.067 462.05 1571.395 L 464.78 1710.93 L 1077.69 1710.93 L 1077.69 1334.624 C 1073.937 1171.202 1086.561 1080.964 1086.561 1080.964 C 1137.224 1068.341 1147.63 1029.109 1147.63 1029.109 C 905.739 703.459 927.062 580.81 905.739 580.81 Z"></path>
+                </clippath>
+            </svg> 
+        
+     
+
+
+            
+            <div id="video_headline" class="bigger" style="width: 100%; text-align: center; top: 450px; color: white; left: 0px; position: absolute; opacity: 0;">&nbsp;</div>
+
+            
+
+            <div id="blur_image" role="button" tabindex="0" onkeypress="javascript:accessClickOut(event);" title="Disneyland Paris Promotion" style="opacity: 1;"><img id="bg_img_160x600" alt="Disneyland Paris Promotion" src="./300_250_300_250_overlay(1).png" source="https://signal-ssl.cdn.spongecell.com/campaigns/23810/signal_processors/7144/images/3300442/300_250_300_250_overlay.png"></div>
+            <div id="particlesEmitter"></div>
+            <canvas id="particlesStage" width="160" height="600" style="position: absolute; top: 0; left: 0;z-index:-1"></canvas>
+            <div id="offer_image" style="opacity: 0;"><img id="offer_image_160x600" src="./160x600.PNG" source="https://signal-ssl.cdn.spongecell.com/campaigns/23810/signal_processors/7144/images/3300511/160x600.PNG"></div>
+           
+            <div id="logo"><img id="logo_img" src="./300_110_DLP_logo.png" source="https://signal-ssl.cdn.spongecell.com/campaigns/23810/signal_processors/7144/images/3300439/300_110_DLP_logo.png"></div>
+            <div id="playButton"></div>
+            <div id="replayButton"></div>
+            
+            <div id="copy_1" style="transform:scale(undefined); top:170px; line-height:1.6;"> 
+                <div id="copy_1__1" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="bigger"><span style="font-size: 1.2em;">Live Star&nbsp;Wars where</span></span></div>
+                <div id="copy_1__2" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="bigger_nobreak"><span style="font-size: 1.2em;">Star&nbsp;Wars lives</span></span></div>
+                <div id="copy_1__3" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+                <div id="copy_1__4" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+                <div id="copy_1__5" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+            </div>
+          <div id="copy_2" style="transform:scale(undefined); top:277.5px; line-height:1.6;"> 
+                <div id="copy_2__1" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);">big_image</div>
+                <div id="copy_2__2" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+                <div id="copy_2__3" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+                <div id="copy_2__4" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+                <div id="copy_2__5" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+            </div>
+            <div id="copy_3" style="transform:scale(undefined); top:121.5px; line-height:1.6;"> 
+                <div id="copy_3__1" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="bigger" style="position: relative; top: 0.4em; text-decoration: underline;">BEST WINTER&nbsp;OFFER</span></div>
+                <div id="copy_3__2" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="thin"></span></div>
+                <div id="copy_3__3" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="bigger"><span style="font-size: 0.89em;">Up to </span><a style="font-size:larger;">2&nbsp;Nights FREE*</a></span></div>
+                <div id="copy_3__4" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"><span class="bigger"><span style="font-size: 0.89em;"><span style="display: inline-block;">on Hotel and</span> <span style="display: inline-block;">Park tickets</span></span></span></div>
+                <div id="copy_3__5" style="opacity: 0; transform: matrix(3, 0, 0, 3, 0, 0);"></div>
+            </div>
+            <div id="copy_4" style="transform:scale(undefined); top:157px; line-height:1.6;"> 
+                <div id="copy_4__1" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><span class="bigger"><span style="font-size: 0.89em;">Up to </span><a style="font-size:larger;">2&nbsp;Nights FREE*</a></span></div>
+                <div id="copy_4__2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><span class="bigger"><span style="font-size: 0.89em;"><span style="display: inline-block;">on Hotel and</span> <span style="display: inline-block;">Park tickets</span></span></span></div>
+                <div id="copy_4__3" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                <div id="copy_4__4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                <div id="copy_4__5" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+            </div>
+            <div id="copy_5" style="transform:scale(undefined); top:277.5px; line-height:1.6;"> 
+                <div id="copy_5__1">default</div>
+                <div id="copy_5__2"></div>
+                <div id="copy_5__3"></div>
+                <div id="copy_5__4"></div>
+                <div id="copy_5__5"></div>
+            </div>
+
+            <div id="ctaMask">
+                <div id="copy_1__6" style="opacity: 0;"></div>
+                <div id="copy_2__6" style="opacity: 0;"></div>
+                <div id="copy_3__6" style="opacity: 0;"></div>
+                <div id="copy_4__6" style="opacity: 1;"><span class="cta" style="color: rgb(34, 62, 96); background-color: rgb(255, 255, 255);">Book by 02&nbsp;October</span></div>
+                <div id="copy_5__6"></div>
+
+            </div>
+            <div id="legal_copy" style="opacity: 1;">*Terms and conditions apply</div>
+            <div id="copyright_copy"><span style="font-size: 0.8em;">©Disney © &amp; TM 2017 LUCASFILM LTD.</span></div>
+
+            <div id="countdown">
+                <div id="countdown__title"><div style="position:relative;display:inline-block;"></div></div>
+                <div id="countdown__time">
+                    <div id="countdown__days"><span class="days">-120</span><br><div id="days_copy">days</div></div>
+                    <div id="countdown__hours"><span class="hours">11</span><br><div id="hours_copy">hours</div></div>
+                    <div id="countdown__minutes"><span class="minutes">49</span><br><div id="minutes_copy">minutes</div></div>
+                </div>
+                <div id="countdown__subtitle"><div style="position:relative;display:inline-block;"></div></div>
+            </div>
+
+
+         </div>  
+
+
+
+<script>
+
+        spongeapi.init({
+        type: 'custom',
+        isDynamic: true,
+        onReady: iveLoaded
+        });
+
+        //- ------- BUTTONS -----------------
+
+                try{
+
+                var backgroundButton = document.getElementById('blur_image');
+                backgroundButton.addEventListener("click", clickOut);
+                }
+                catch(e){}
+
+             
+                function accessClickOut(event)
+                {   
+                    if (event.keyCode === 0 || event.keyCode === 32 || event.keyCode === 13) {
+                    event.preventDefault();
+                    spongeapi.openLanding('68696');
+
+                    return false;
+                }
+                else{console.log("Unrecognised Input");}
+
+                }
+               function clickOut()
+                {
+                console.log("OPEN BACKING");
+                spongeapi.openLanding('68696');
+                return false;
+                }
+
+
+        var play1 = 'test';     
+        var play2 = 'test';
+        var play3 = 'test';
+        var play4 = 'test';
+        var play5 = 'test';
+        var play6 = 'default';
+        var myVariable = "this";
+        var skipMe = "false";
+
+        
+            
+        function iveLoaded() {
+
+                countdownTitle_Split = new SplitText(countdown__title, {type:"words,chars"}),  
+                countdownSubtitle_Split = new SplitText(countdown__subtitle, {type:"words,chars"}),             
+                countdownTitle_Chars = countdownTitle_Split.chars; 
+                countdownSubtitle_Chars = countdownSubtitle_Split.chars; 
+                //---------- Pull colours through dynamically and create gradient
+                colour_start_value = spongeapi.getDynamicText('colour_start_value');
+                colour_end_value = spongeapi.getDynamicText('colour_end_value');
+                cta_colour = spongeapi.getDynamicText('cta_colour');
+                var backgroundButton = document.getElementById('blur_image');
+                backgroundButton.setAttribute("title", spongeapi.getDynamicText('offer_alt_text'));
+                var buttonAltText = document.getElementById('bg_img_160x600');
+                buttonAltText.setAttribute("alt", spongeapi.getDynamicText('offer_alt_text'));
+
+                var posElem = document.getElementById('background__gradient');
+                var newStyle = 
+                "z-index: 2;" +
+                "position: absolute;" +
+                "width: 160px;" +
+                "height: 600px;" +
+                "background: -moz-linear-gradient(270deg, #"+colour_start_value+" 0%, #"+colour_end_value+" 100%); /* ff3.6+ */" +
+                "background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #"+colour_start_value+"), color-stop(100%, #"+colour_end_value+")); /* safari4+,chrome */" +
+                "background: -webkit-linear-gradient(270deg, #"+colour_start_value+" 0%, #"+colour_end_value+" 100%); /* safari5.1+,chrome10+ */" +
+                "background: -o-linear-gradient(270deg, #"+colour_start_value+" 0%, #"+colour_end_value+" 100%); /* opera 11.10+ */" +
+                "background: -ms-linear-gradient(270deg, #"+colour_start_value+" 0%, #"+colour_end_value+" 100%); /* ie10+ */" +
+                "background: linear-gradient(180deg, #"+colour_start_value+" 0%, #"+colour_end_value+" 100%); /* w3c */" +
+                "filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#"+colour_start_value+"', endColorstr='#"+colour_end_value+"',GradientType=0 ); /* ie6-9 */";
+                if( typeof( posElem.style.cssText ) != 'undefined' ) {
+                    posElem.style.cssText = newStyle;
+                        } else {
+                        posElem.setAttribute('style',newStyle);
+                }
+
+                
+                // ---------- apply CTA Colour
+               var myElement = document.querySelector('.cta');
+                    myElement.style.backgroundColor = "#"+cta_colour;
+
+
+            // ---------- DECLARE VARIABLES -----------------------------------------
+            play1 = spongeapi.getDynamicText('copy_1__1');
+            play2 = spongeapi.getDynamicText('copy_2__1');
+            play3 = spongeapi.getDynamicText('copy_3__1');
+            play4 = spongeapi.getDynamicText('copy_4__1');
+            play5 = spongeapi.getDynamicText('copy_5__1');
+            has_particles = spongeapi.getDynamicText('has_particles');
+            has_video = spongeapi.getDynamicText('has_video');
+            bgMove = spongeapi.getDynamicText('does_bg_move');
+            var screen1 = new Array();
+            var copyField = "temp";
+            var fieldNameElement = "temp";                    
+            var myUnit = document.getElementById("copy_1");
+            var myUnit2 = document.getElementById("copy_2");
+            var myUnit3 = document.getElementById("copy_3");
+            var myUnit4 = document.getElementById("copy_4");
+            var myUnit5 = document.getElementById("copy_5");
+            var breakIt = spongeapi.getDynamicText('break_long_words');
+            var setLineHeight = spongeapi.getDynamicText('tall_lineheight_override');
+            var heightOfContent = 420;
+        
+            //----------- COUNTDOWN --------------------------
+            myNewDate = spongeapi.getDynamicText('countdownFrom');
+            deadline = new Date(Date.parse(myNewDate));
+
+                    function getTimeRemaining(endtime) {
+                        var t = Date.parse(endtime) - Date.parse(new Date());
+                        var minutes = Math.floor((t / 1000 / 60) % 60);
+                        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        return {
+                            'total': t,
+                            'days': days,
+                            'hours': hours,
+                            'minutes': minutes
+                        };
+                    }
+
+                    function initializeClock(endtime) {
+                        var daysSpan = $('.days');
+                        var hoursSpan = $('.hours');
+                        var minutesSpan = $('.minutes');
+
+                        function updateClock() {
+                            var t = getTimeRemaining(endtime);
+
+                            daysSpan.html(t.days);
+                            hoursSpan.html(('0' + t.hours).slice(-2));
+                            minutesSpan.html(('0' + t.minutes).slice(-2));
+
+                            if (t.total <= 0) {
+                                clearInterval(timeinterval);
+                            }
+                      }
+
+                      updateClock();
+                      var timeinterval = setInterval(updateClock, 1000);
+                    }
+
+                    initializeClock(deadline);
+
+
+            // _________ PLAY PAUSE VIDEO__________________________________________________________
+
+
+                
+                var playButton = document.getElementById('playButton');
+                playButton.addEventListener("click", clickPlay);
+                var replayButton = document.getElementById('replayButton');
+                replayButton.addEventListener("click", clickReplay);
+                var animationPlaying = true;
+
+                accessOptions = spongeapi.getDynamicText('enable_access_options');
+                if(accessOptions == "true"){
+                console.log("ENABLE ACCESS");
+                playButton.style.display = "block";
+                replayButton.style.display = "block";
+                }
+
+
+                
+
+               function clickPlay()
+                {   
+
+                    if(animationPlaying == true)
+                    {
+                         tl1.pause();
+                         animationPlaying = false;
+                         playButton.style.backgroundImage = "url('assets/play.png')";
+                        
+                    }
+                    else
+                    {
+                        tl1.play();
+                        animationPlaying = true;
+                        playButton.style.backgroundImage = "url('assets/pause.png')";
+                    }
+
+
+                }
+                function clickReplay()
+                {   
+                    tl1.restart();
+                    animationPlaying = true;
+                    playButton.style.backgroundImage = "url('assets/pause.png')";
+                }
+
+
+
+            // ---------- CHECK MOVILE AND VIDEO OVERRIDE -----------------------------------------
+            if(has_video =="false"){var mobileDevice = true;}
+            else{var mobileDevice = false;}
+
+            try{
+                video_override = spongeapi.getDynamicText('video_override');
+                if(video_override =="true"){
+                var mobileDevice = true;
+                //console.log("VIDEO OVERRIDE ON + "+video_override);
+                }}catch(e){}
+                      (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) mobileDevice = true;})(navigator.userAgent||navigator.vendor||window.opera);
+
+            mobileAndTabletcheck = function() {
+                    //console.log("RUN MY FUNCTION");
+                    return mobileDevice;
+                    };
+
+                    mobileAndTabletcheck();
+                   if(mobileDevice == true){
+                        var videoElement = document.getElementById("myVideo");
+                        videoElement.parentNode.removeChild(videoElement);
+                    }
+                    else{
+
+                        //console.log("Video Exists")
+                        var videoBacking = document.getElementById('promo_img_160x600');
+                        videoBacking.style.opacity = "0";
+                        var videoElement = document.getElementById("mainVideo");
+                        var mySource = document.createElement('source');
+                        videoName = spongeapi.getDynamicText('videoName');
+                        mySource.setAttribute('src', 'assets/'+videoName+'.mp4');
+                        videoElement.appendChild(mySource);
+                        videoElement.play();
+                    }
+
+                // ---------- RESIZE ALL COPY BASED ON LARGEST FIELD -----------------------------------------
+
+                for (i=1; i<=6; i++)
+                    {
+                    //console.log("i - "+i);
+                     try{
+                        copyField = spongeapi.getDynamicText('copy_1__'+i);
+                        fieldNameElement = document.getElementById('copy_1__'+i);
+                        fieldNameElement.innerHTML = copyField;
+                        //console.log("Working?");
+                        }
+                    catch(e){}
+                    }
+
+                myUnit.setAttribute("style","line-height:"+setLineHeight+";");
+                myUnit2.setAttribute("style","line-height:"+setLineHeight+";");
+                myUnit3.setAttribute("style","line-height:"+setLineHeight+";");
+                myUnit4.setAttribute("style","line-height:"+setLineHeight+";");
+                myUnit5.setAttribute("style","line-height:"+setLineHeight+";");
+
+                var unitHeight = document.getElementById('copy_1').clientHeight;
+                if(unitHeight<=document.getElementById('copy_2').clientHeight)
+                    {unitHeight = document.getElementById('copy_2').clientHeight;}
+                if(unitHeight<=document.getElementById('copy_3').clientHeight)
+                    {unitHeight = document.getElementById('copy_3').clientHeight;}
+                if(unitHeight<=document.getElementById('copy_4').clientHeight)
+                    {unitHeight = document.getElementById('copy_4').clientHeight;}
+                if(unitHeight<=document.getElementById('copy_5').clientHeight)
+                    {unitHeight = document.getElementById('copy_5').clientHeight;}
+
+                //console.log("myscale = "+unitHeight);
+                
+                if(unitHeight>=heightOfContent)
+                    {
+                    //console.log("rescale2 "+unitHeight); 
+                    var myScale = heightOfContent/unitHeight;
+                    unitHeight = unitHeight*myScale;
+                    }
+
+
+                     for(k=1; k<=5; k++)
+                {
+
+                        if(spongeapi.getDynamicText('copy_'+k+'__6') != ""){
+                        if(k==1){var ExtraShift = 60;}
+                        if(k==2){var ExtraShift2 = 60;}
+                        if(k==3){var ExtraShift3 = 60;}
+                        if(k==4){var ExtraShift4 = 60;}
+                        if(k==5){var ExtraShift5 = 60;}
+                        }
+
+                        else{
+                        if(k==1){var ExtraShift = 80;}
+                        if(k==2){var ExtraShift2 = 80;}
+                        if(k==3){var ExtraShift3 = 80;}
+                        if(k==4){var ExtraShift4 = 80;}
+                        if(k==5){var ExtraShift5 = 80;}
+                        }
+
+                }
+                //console.log("x-ContentHeight = "+heightOfContent);
+                //console.log("x-UnitHeight = "+unitHeight);
+                //console.log("myHeight = "+unitHeight);
+                
+                var myNumber = ((heightOfContent-document.getElementById('copy_1').clientHeight)/2)+ExtraShift;
+                var myNumber2 = ((heightOfContent-document.getElementById('copy_2').clientHeight)/2)+ExtraShift2;
+                var myNumber3 = ((heightOfContent-document.getElementById('copy_3').clientHeight)/2)+ExtraShift3;
+                var myNumber4 = ((heightOfContent-document.getElementById('copy_4').clientHeight)/2)+ExtraShift4;
+                var myNumber5 = ((heightOfContent-document.getElementById('copy_5').clientHeight)/2)+ExtraShift5;
+                myUnit.setAttribute("style","transform:scale("+myScale+"); top:"+myNumber+"px; line-height:"+setLineHeight+";");
+                myUnit2.setAttribute("style","transform:scale("+myScale+"); top:"+myNumber2+"px; line-height:"+setLineHeight+";");
+                myUnit3.setAttribute("style","transform:scale("+myScale+"); top:"+myNumber3+"px; line-height:"+setLineHeight+";");
+                myUnit4.setAttribute("style","transform:scale("+myScale+"); top:"+myNumber4+"px; line-height:"+setLineHeight+";");
+                myUnit5.setAttribute("style","transform:scale("+myScale+"); top:"+myNumber5+"px; line-height:"+setLineHeight+";");
+    
+         //---------- apply background ULR for small images (if used)
+                try{
+                    document.getElementById('small_image').style.backgroundImage='url('+spongeapi.getDynamicImage('small_image_160x600')+')';
+                    }
+                catch(e){}
+
+
+                // ---------- VARIABLES FOR PARTICLES  -----------------------------------------
+
+                $("#background__gradient").css('z-index','0');
+                function particlesOff(){$("#particlesEmitter").css({'top':'-900px', 'left':'-900px'})}
+             
+    //- ------- BUTTONS -----------------
+
+                try{
+                var myVideoButton = document.getElementById('clickthrough');
+                myVideoButton.addEventListener("click", clickVideo);
+
+                }
+                catch(e){}
+
+               function clickVideo()
+                {
+                    spongeapi.openScreen('Video Screen',{engagement:false});
+                    console.log("OPEN SCREEN");
+
+                }
+                if(breakIt == "true"){
+             
+                document.body.innerHTML = document.body.innerHTML.replace('</span><span', '-</span><span');
+                }
+
+                // ---------- DECLARE TIMELINE -----------------------------------------
+            
+             // ---------- FRAME 0 -----------------------------------------
+             tl1 = new TimelineMax({paused: false})
+             tl1.addLabel("step1")
+             tl1.to(castle__small, 3, { morphSVG:castle__big, ease: Power4.easeInOut })
+             tl1.to(video_headline, 0.3, {alpha:1, ease: Expo}, "-=1.8")
+
+             if(bgMove=="false"){}
+                else if(bgMove=="slow"){
+             tl1.to(promo_img_160x600,1.7, {marginTop:-600, ease: Power1.easeOut}, "-=0.0")}
+                else{
+             tl1.to(promo_img_160x600,1.5, {marginTop:-10, ease: Power2.easeOut}, "-=0.4")
+             }
+             tl1.to(video_headline, 0.3, {alpha:0, ease: Expo}, "-=1.4")
+             tl1.fromTo(blur_image, 0.3, {alpha:0, ease: Expo},{alpha:1}, "-=0.2")
+        
+             // ---------- FRAME 1 -----------------------------------------
+            tl1.addLabel("step1")
+            var animationSpeed = spongeapi.getDynamicText('timeline_speed');
+            var currentTimeScale = tl1.timeScale(); 
+            tl1.add( function(){ tl1.timeScale(animationSpeed); } )
+
+
+            if(play1 == "big_image")
+            {
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}) 
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}, "+=1.0") 
+            }
+
+            else{
+            tl1.staggerFromTo(('#copy_1 div'), .8, {opacity:0, scale:3,  ease:Expo},{opacity:1, scale:1}, "-=0.5")
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            tl1.to(copy_1__6, 0.3, {alpha:1, ease: Expo}, "-=0.1")
+
+            if(has_particles == 'true'){
+                    tl1.set("#particlesEmitter", {top:-40, left:155},"step1")
+                    tl1.set("#particlesStage", {'z-index':0},"step1+=0.6")
+                    tl1.to("#particlesEmitter", 3.2, {bezier:[{left:'150%', top:'45%'}, {left:'-20%', top:'40%'}, {left:'30%', top:'53%'}, {left:'160%', top:'37%'}], ease:Power2.easeOut},"-=1.4")
+            }}
+
+
+            if(play2 == 'countdown'){
+            playCountdown(3);
+
+            }
+            else if(play2 == 'video'){
+            launchVideo(3);
+            }
+            else if(play2 != 'default'){
+            //console.log("play2 XXXXXXXXXXXXXX = "+play2);
+            playScreen2();
+            }
+
+
+            // ---------- FRAME 2 -----------------------------------------
+            function playScreen2(){
+            tl1.addLabel("step2")
+            
+            tl1.staggerTo(('#copy_1 div'), .8, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+            tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=0.3") 
+            tl1.to(copy_1__6, 0.3, {alpha:0, ease: Expo}, "-=0.1")
+
+            if(play2 == "big_image")
+            {
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}) 
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}, "+=1.0") 
+            }
+
+            else{
+            tl1.staggerFromTo(('#copy_2 div'), .8, {opacity:0, scale:3,  ease:Expo},{opacity:1, scale:1}, 0.15)
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            if(has_particles == 'true'){
+                    tl1.to("#particlesEmitter", 3.2, {bezier:[{left:'150%', top:'45%'}, {left:'-20%', top:'40%'}, {left:'30%', top:'53%'}, {left:'160%', top:'37%'}], ease:Power2.easeOut},"-=1.4")
+            }
+            tl1.to(copy_2__6, 0.3, {alpha:1, ease: Expo}, "-=0.1")
+            }
+            if(play3 == 'countdown'){
+            playCountdown(4);
+
+            }
+            else if(play3 == 'video'){
+            launchVideo(4);
+            }
+            else if(play3 != 'default'){
+                //console.log("play3 = "+play3);
+                playScreen3();
+                }
+            }
+            // ---------- FRAME 3 -----------------------------------------
+            function playScreen3(){
+            if(skipMe=="true"){skipMe = "false";}
+            else{
+            tl1.staggerTo(('#copy_2 div'), .8, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+            tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=0.3")
+            tl1.to(copy_2__6, 0.3, {alpha:0, ease: Expo}, "-=0.1")
+            }
+            tl1.addLabel("step3")
+            if(play3 == "big_image")
+            {
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}) 
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}, "+=1.0") 
+            }
+
+            else{
+            //console.log("step 3 ? ")
+            tl1.staggerFromTo(('#copy_3 div'), .8, {opacity:0, scale:3,  ease:Expo},{opacity:1, scale:1}, 0.15)
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            if(has_particles == 'true'){
+                    tl1.to("#particlesEmitter", 3.2, {bezier:[{left:"-120%", top:"42%"}, {left:"30%", top:"70%"}, {left:"70%", top:"40%"}, {left:"160%", top:"37%"}], ease:Power2.easeOut},"-=1")
+            }
+            tl1.to(copy_3__6, 0.3, {alpha:1, ease: Expo}, "-=0.1")
+            }
+            if(play4 == 'countdown'){
+            playCountdown(5);
+
+            }
+            else if(play4 == 'video'){
+            launchVideo(5);
+            }
+            else if(play4 != 'default'){
+                //console.log("YES3");
+                //console.log("play4 = "+play4);
+                playScreen4();
+            }
+        }
+
+            // ---------- FRAME 4 -----------------------------------------
+            function playScreen4(){
+            if(skipMe=="true"){skipMe = "false";}
+            else{
+            tl1.staggerTo(('#copy_3 div'), .8, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+            tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=0.3")
+            tl1.to(copy_3__6, 0.3, {alpha:0, ease: Expo}, "-=0.1")
+            }
+            tl1.addLabel("step4")
+            if(play4 == "big_image")
+            {
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}) 
+               tl1.to(offer_image, 0.3, {alpha:1, ease: Expo}, "+=1.0") 
+            }
+
+            else{
+            tl1.staggerFromTo(('#copy_4 div'), .8, {opacity:0, scale:3,  ease:Expo},{opacity:1, scale:1}, 0.15)
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            if(has_particles == 'true'){
+                    tl1.to("#particlesEmitter", 3.2, {bezier:[{left:"-120%", top:"42%"}, {left:"30%", top:"70%"}, {left:"70%", top:"40%"}, {left:"160%", top:"37%"}], ease:Power2.easeOut},"-=1")
+            }
+            tl1.to(copy_4__6, 0.3, {alpha:1, ease: Expo}, "-=0.1")
+            }
+            if(play5 == 'countdown'){
+            playCountdown(6);
+
+            }
+            else if(play5 == 'video'){
+            launchVideo(6);
+            }
+            else if(play5 != 'default'){
+                //console.log("YES3");
+                //console.log("play5 = "+play5);
+                playScreen5();
+            }
+        }
+
+            // ---------- FRAME 5 -----------------------------------------
+            function playScreen5(){
+            if(skipMe=="true"){skipMe = "false";}
+            else{
+            tl1.staggerTo(('#copy_4 div'), .8, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+            tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=0.3")
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            tl1.to(copy_4__6, 0.3, {alpha:0, ease: Expo}, "-=0.1")
+            }
+            tl1.addLabel("step5")
+            tl1.staggerFromTo(('#copy_5 div'), .8, {opacity:0, scale:3,  ease:Expo},{opacity:1, scale:1}, 0.15)
+            tl1.to(legal_copy, 0.3, {alpha:1, ease: Expo}, "-=0.3")
+            tl1.to(copy_5__6, 0.3, {alpha:1, ease: Expo}, "-=0.1")
+            tl1.paused()
+            }
+        
+
+
+            //------------ LAUNCH VIDEO --------------------------------
+
+            function launchVideo(playVariable)
+            {
+                    tl1.staggerTo(('#copy_1 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+                    tl1.staggerTo(('#copy_2 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.staggerTo(('#copy_3 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.staggerTo(('#copy_4 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=1.0") 
+
+                    if(playVariable ==3){tl1.to(copy_2__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                    if(playVariable ==4){tl1.to(copy_3__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                    if(playVariable ==5){tl1.to(copy_4__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                    if(playVariable ==6){tl1.to(copy_5__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+
+                    tl1.add( function(){ spongeapi.openScreen('Video Screen'); } )
+
+            }
+
+            //------------ COUNTDOWN ------------------------------------
+
+            function playCountdown(playVariable)
+            {
+                    var isSubtitle = spongeapi.getDynamicText('countdown__subtitle');
+
+                    console.log("IS SUBTITLE = "+isSubtitle);
+                    var myPercentage= 8/100*600;
+
+                    if(spongeapi.getDynamicText('copy_'+(playVariable-1)+'__6') != ""){
+                        console.log("CTA");
+            
+
+                    if(isSubtitle == "&nbsp;"){
+                        $('#countdown__title').css({bottom: '380px'});
+                        $('#countdown__time').css({top: '247px'});
+                        console.log("MOVING");
+
+                    } }  
+                    else{
+                        $('#countdown__title').css({bottom: '360px'});
+                        $('#countdown__time').css({top: '267px'});
+                        $('#countdown__subtitle').css({top: '350px'});
+                        console.log("MOVING");
+
+                           
+                    }
+
+                    tl1.staggerTo(('#copy_1 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "+=1.0")
+                    tl1.staggerTo(('#copy_2 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.staggerTo(('#copy_3 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.staggerTo(('#copy_4 div'), .5, {opacity:0, scale:3,  ease:Back.easeOut.config(2)}, 0.15, "-=1.0")
+                    tl1.to(offer_image, 0.3, {alpha:0, ease: Expo}, "-=1.0") 
+
+                    tl1.set(countdownTitle_Chars, {perspective:400})
+                    tl1.set(countdown, {opacity:1})
+                    tl1.set(countdown__title, {opacity:1})
+                    tl1.set(countdown__subtitle, {opacity:1})
+                      .staggerFrom(countdownTitle_Chars, 1.2, {scale:0.5, rotationY:180, rotationX:90, transformOrigin:"0% 50% 30",  ease:Elastic.easeOut.config(.8)}, 0.02)
+                      .staggerTo(countdownTitle_Chars, 1.2, {opacity:1, ease:Elastic.easeOut.config(.8)}, 0.02,"-=.1.2")
+                        .from(countdown__days, .6, {scale: 0, transformOrigin: '150% 50%', ease: Back.easeOut.config(2)},"-=.8")
+                        .to(countdown__days, .6, {opacity: 1},"-=.6")
+                        .from(countdown__hours, .6, {scale: 0, transformOrigin: '50% 50%', ease: Back.easeOut.config(2)},"-=.6")
+                        .to(countdown__hours, .6, {opacity: 1},"-=.6")
+                        .from(countdown__minutes, .6, {scale: 0, transformOrigin: '-50% 50%', ease: Back.easeOut.config(2)},"-=.4")
+                        .to(countdown__minutes, .6, {opacity: 1},"-=.6")
+                        .staggerFrom(countdownSubtitle_Chars, 1.2, { scale:0.5, rotationY:180, rotationX:90, transformOrigin:"0% 50% 30",  ease:Elastic.easeOut.config(.8)}, 0.02)
+                        .staggerTo(countdownSubtitle_Chars, 1.2, {opacity:1, ease:Elastic.easeOut.config(.8)}, 0.02,"-=.1.2")
+                        
+                        if(playVariable ==3){tl1.to(copy_2__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                        if(playVariable ==4){tl1.to(copy_3__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                        if(playVariable ==5){tl1.to(copy_4__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                        if(playVariable ==6){tl1.to(copy_5__6, 0.5, {alpha:1, ease: Expo}, "-=0.5")}
+                        
+                        //console.log("play Variable = "+playVariable);  
+                        //console.log("playX = "+eval("play"+playVariable));
+
+                        if(eval("play"+playVariable) != 'default'){
+
+                        tl1.staggerTo(countdownTitle_Chars, .6, {opacity:0, scale:0.5, rotationY:180, rotationX:90, transformOrigin:"0% 50% 30",  ease:Elastic.easeOut.config(.8)}, 0.02, '+=2.4')
+                        .to(countdown__days, .6, {opacity:0, scale: 0, transformOrigin: '150% 50%', ease: Back.easeOut.config(2)},"-=.6")
+                        .to(countdown__hours, .6, {opacity:0, scale: 0, transformOrigin: '50% 50%', ease: Back.easeOut.config(2)},"-=.6")
+                        .to(countdown__minutes, .6, {opacity:0, scale: 0, transformOrigin: '-50% 50%', ease: Back.easeOut.config(2)},"-=.6")
+                        .staggerTo(countdownSubtitle_Chars, .6, {opacity:0, scale:0.5, rotationY:180, rotationX:90, transformOrigin:"0% 50% 30",  ease:Elastic.easeOut.config(.8)}, 0.02, '-=.6')
+
+                        var ctaRemain = spongeapi.getDynamicText('ctaRemain');
+                        if(playVariable ==3 && ctaRemain =="false"){tl1.to(copy_2__6, 0.5, {alpha:0, ease: Expo}, "-=0.5")}
+                        if(playVariable ==4 && ctaRemain =="false"){tl1.to(copy_3__6, 0.5, {alpha:0, ease: Expo}, "-=0.5")}
+                        if(playVariable ==5 && ctaRemain =="false"){tl1.to(copy_4__6, 0.5, {alpha:0, ease: Expo}, "-=0.5")}
+                        if(playVariable ==6 && ctaRemain =="false"){tl1.to(copy_5__6, 0.5, {alpha:0, ease: Expo}, "-=0.5")}
+           
+                        
+                        skipMe = "true";
+                       if(playVariable==3){playScreen3();}
+                       else if(playVariable==4){playScreen4();}
+                       else if(playVariable==5){playScreen5();}
+
+}
+            }
+
+
+}
+                    // PARTICLES ___________________________________________________
+
+                    new ParticleExample(
+
+                        ["assets/particle.png"],
+
+                        {
+                            "alpha": {
+                                "start": 1,
+                                "end": 0
+                            },
+                            "scale": {
+                                "start": 0.1,
+                                "end": 0.35,
+                                "minimumScaleMultiplier": 1
+                            },
+                            "color": {
+                                "start": "#ffffff",
+                                "end": "#ffffff"
+                            },
+                            "speed": {
+                                "start": 30,
+                                "end": 100
+                            },
+                            "acceleration": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "startRotation": {
+                                "min": 0,
+                                "max": 360
+                            },
+                            "noRotation": true,
+                            "rotationSpeed": {
+                                "min": 0,
+                                "max": 0
+                            },
+                            "lifetime": {
+                                "min": 0.2,
+                                "max": 1
+                            },
+                            "blendMode": "normal",
+                            "frequency": 0.001,
+                            "emitterLifetime": 0,
+                            "maxParticles": 120,
+                            "pos": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "addAtBack": false,
+                            "spawnType": "circle",
+                            "spawnCircle": {
+                                "x": 0,
+                                "y": 0,
+                                "r": 0
+                            }
+                        });
+
+        </script>
+    
+
+</body></html>

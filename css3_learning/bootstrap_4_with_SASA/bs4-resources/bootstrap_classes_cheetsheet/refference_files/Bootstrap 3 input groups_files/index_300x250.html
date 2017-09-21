@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://s0.2mdn.net/4263741/1474036242568/index_300x250.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" href="./banner.css">
+    <script src="./TweenLite.min.js"></script>
+    <script src="./CSSPlugin.min.js"></script>
+    <script src="./BezierPlugin.min.js"></script>
+    <script src="./EasePack.min.js"></script>
+    <script src="./banner.js"></script>
+    <script>
+    var clickTag = "http://www.talktalk.co.uk/";
+    clickThrough = function()
+    {
+      window.open(clickTag);
+    }
+    </script>
+  <script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+  <body>
+    <div class="banner" onclick="clickThrough()">
+      <div class="banner__content">
+        <div class="banner__border" style="visibility: inherit; opacity: 1;"></div>
+        <div class="banner__background-exit" style="visibility: hidden; opacity: 0;"></div>
+        <img src="./background.png" id="background" style="top: 0px; left: 0px; visibility: inherit; opacity: 1;">
+        <img src="./bonanza.png" id="bonanza" style="z-index: 10; top: 10px; left: -254px; visibility: inherit; opacity: 1;">
+        <div id="banner__emitter-left" class="banner__emitter" style="visibility: hidden; opacity: 0;">
+          <!--Emitter One-->
+          <img src="./YelStar4.png" alt="" id="greenstar_left" style="visibility: hidden; opacity: 0;">
+          <img src="./YelStar9.png" alt="" style="left: 10px; top: 10px; visibility: hidden; opacity: 0;" id="bluestar_left">
+        </div>
+        <div id="banner__emitter-right" class="banner__emitter" style="visibility: hidden; opacity: 0;">
+          <!--Emitter One-->
+          <img src="./YelStar4.png" alt="" id="greenstar_right" style="visibility: hidden; opacity: 0;">
+          <img src="./YelStar9.png" alt="" style="left: 10px; top: 10px; visibility: hidden; opacity: 0;" id="bluestar_right">
+        </div>
+        <!-- this is where the emitters are copied into -->
+        <div id="banner__emitter-holder" style="visibility: inherit; opacity: 1;"></div>
+        <img src="./planet1.png" id="planetone" style="visibility: hidden; opacity: 0;">
+        <img src="./planet2.png" id="planettwo" style="visibility: hidden; opacity: 0;">
+        <img src="./planet3.png" id="planetthree" style="visibility: hidden; opacity: 0;">
+        <img src="./rocketleft.png" id="rocketleft" style="top: -236px; left: -300px; visibility: inherit; opacity: 1; transform: matrix(0.81915, -0.57357, 0.57357, 0.81915, 0, 0);">
+        <img src="./rocketcenter.png" id="rocketcenter" style="top: -319px; left: 81px; visibility: inherit; opacity: 1; transform: matrix(0.99619, 0.08715, -0.08715, 0.99619, 0, 0);">
+        <img src="./rocketright.png" id="rocketright" style="top: -243px; left: 300px; visibility: inherit; opacity: 1; transform: matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 0);">
+        <img src="./wifi.png" id="wifi" style="top: 12px; left: 14px; visibility: hidden; opacity: 0;">
+        <div class="banner__content-wifilights" style="top: 12px; left: 14px; visibility: hidden; opacity: 0;">
+          <img src="./wifilight0.png" id="wifi0" style="visibility: hidden; opacity: 0;">
+          <img src="./wifilight1.png" id="wifi1" style="visibility: hidden; opacity: 0;">
+          <img src="./wifilight2.png" id="wifi2" style="visibility: hidden; opacity: 0;">
+          <img src="./wifilight3.png" id="wifi3" style="visibility: hidden; opacity: 0;">
+        </div>
+        <div class="banner__wifi" id="wifione" style="overflow: hidden; transform-origin: 50% 50% 0px; height: 95px; width: 112px; transform: matrix(1, 0, 0, 1, 0, 0); top: 100px; left: 155px; visibility: hidden; opacity: 0;">
+          <img src="./wifi.png" id="wifi" style="top: 12px; left: 14px; visibility: hidden; opacity: 0;">
+        </div>
+        <div class="banner__wifi" id="wifitwo" style="overflow: hidden; transform-origin: 50% 50% 0px; height: 95px; width: 112px; transform: matrix(1, 0, 0, 1, 0, 90); top: 104px; left: 155px; visibility: hidden; opacity: 0;">
+          <img src="./wifi.png" id="wifi" style="top: -96px; left: 14px; visibility: hidden; opacity: 0;">
+        </div>
+        <div id="whitefade" style="background-color: rgb(255, 255, 255); height: 250px; width: 300px; top: 0px; left: 0px; visibility: hidden; opacity: 0;"></div>
+        <div class="banner__bucket" id="bucketone" style="overflow: hidden; transform-origin: 50% 50% 0px; height: 77px; width: 62px; transform: matrix(1, 0, 0, 1, 0, 0); top: 124px; left: 233px; visibility: hidden; opacity: 0;">
+          <img src="./bucket.png" id="bucket" style="visibility: hidden; opacity: 0;">
+        </div>
+        <div class="banner__bucket" id="buckettwo" style="overflow: hidden; transform-origin: 50% 50% 0px; height: 77px; width: 62px; transform: matrix(1, 0, 0, 1, 0, 90); top: 111px; left: 233px; visibility: hidden; opacity: 0;">
+          <img src="./bucket.png" id="bucket" style="top: -77px; visibility: hidden; opacity: 0;">
+        </div>
+        <img src="./textone.svg" id="textone" style="height: 87px; width: 111px; transform: matrix(1, 0, 0, 1, 85, 85); visibility: hidden; opacity: 0;">
+        <img src="./texttwo.svg" id="texttwo" style="height: 77px; width: 129px; transform: matrix(1, 0, 0, 1, 75, 80); visibility: hidden; opacity: 0;">
+        <img src="./textthree.svg" id="textthree" style="top: 74px; left: 76px; height: 80px; width: 121px; visibility: hidden; opacity: 0;">
+        <img src="./textfour.svg" id="textfour" style="height: 141px; width: 136px; transform: matrix(1, 0, 0, 1, 81, 79); visibility: hidden; opacity: 0;">
+        <img src="./textfive.svg" id="textfive" style="height: 87px; width: 86px; transform: matrix(1, 0, 0, 1, 120, 82); visibility: hidden; opacity: 0;">
+        <img src="./asterisk.svg" id="asterisk" style="top: 230px; left: 36px; transform-origin: 0% 0% 0px; height: 16px; width: 242px; transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;">
+        <img src="./endframe.svg" id="endframe" style="top: 48px; left: 13px; transform-origin: 0% 0% 0px; height: 188px; width: 170px; transform: matrix(1, 0, 0, 1, 0, 0); visibility: hidden; opacity: 0;">
+        <img src="./voucher.png" id="voucher" style="top: -5px; left: 167px; visibility: hidden; opacity: 0;">
+        <img src="./button.png" id="button" style="top: 207px; left: 205px; visibility: hidden; opacity: 0;">
+        <img src="./logo(1).png" id="logo" style="top: 10px; left: 10px; visibility: inherit; opacity: 1;">
+      </div>
+    </div>
+    
+  
+</body></html>

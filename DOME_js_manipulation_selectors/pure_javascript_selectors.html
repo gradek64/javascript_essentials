@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pure javascript selectors</title>
+<style>
+	
+	/*p:first-child {	
+			background-color: yellow;
+	}*/
+</style>
+
+
+</head>
+<body>
+			<h1>Pure javascript selectors</h1>
+			<code>
+					Important ! <br><br>
+ 
+					most of the selector as (document.getElementsByTagName("button") document.querySelectorAll returns NodeList , so you need to either loop trough it or access it by its array numnber as document.getElementsByClassName("single_class")[0] ...<br><br>
+					exception to that is : document.getElementById("id") and document.querySelector()
+
+			</code>
+			<div>
+				<p id="id">I have been selected by <span style="color:red">document.getElementById("id")</span></p>
+				<p class="single_class">I have been selected by <span style="color:red">document.getElementsByClassName("single_class")[0]</span></p>
+				<p>
+					<h3>if the class is used multiple times you can you [0][1] seletors for <span style="color:red">document.querySelectorAll("p.intro")[1]</h3>
+						<p class="intro">this is first element from class <span> change my color by:document.querySelectorAll("p.intro span")[0].style.color</span></p>
+						<p class="intro">this is first element from class <span> change my color by:document.querySelectorAll("p.intro span")[1].style.color</span></p>
+						<p class="intro2">this is first element from class <span> change my color by:document.querySelector("p.intro span").style.color</span></p>
+						<p class="intro3">this is first element from class 
+						<span>document.querySelector("p.intro3 span:first-child").style.backgroundColor</span>
+						<span>document.querySelector("p.intro3 span:last-child").style.backgroundColor</span>
+						</p>
+						<p class="intro4" my-attr="greg">this is first element from class <span> change my color by:document.querySelector("p.intro span").style.color</span></p>
+						<p class="intro4" my-attr="gregory">this is first element from class <span> change my color by:document.querySelector("p.intro span").style.color</span></p>
+						<button>sample button for selector</button>
+				</p>
+			</div>
+
+			<div class="gwd-div-14md" id="con2" onclick="selectChildData(this);" style="width:500px;height: 30px;border:1px solid green;margin-bottom: 20px;">
+			       <p class="gwd-img-y1ho set" id="image2" data-set="risatorp">click me to get child data-title tag</p>
+			       <p class="gwd-img-y1ho set" id="image2" data-title="risatorp">click me to get child data-title tag</p>
+			       <p class="gwd-img-y1ho set" id="image3" data-title="risatorp2">click me to get child data-title tag</p>
+			       <p class="gwd-img-y1ho set" id="image4" data-title="risatorp3">click me to get child data-title tag</p>
+			       <p class="gwd-img-y1ho set" id="image4" data-title="risatorp4">click me to get child data-title tag</p>
+			</div>
+</body>
+
+<script>
+		//usual selector by id;
+
+		document.getElementById("id").style.border = "1px solid red";
+
+		//by tag name
+		document.getElementsByTagName("button")[0].style.border = "1px dotted green";
+
+		//select by class;
+
+		document.getElementsByClassName("single_class")[0].style.border = "1px dotted green";
+
+		//select by class and its specific element;
+
+		document.querySelectorAll("p.intro")[1].style.border = "1px dotted blue";
+
+		//select by class and its specific element;
+
+		document.querySelectorAll("p.intro span")[0].style.color = "green";
+		document.querySelectorAll("p.intro span")[1].style.color = "pink";
+
+
+		//select by modern CSS3 selecttors=
+
+		document.querySelector("p.intro3 span:first-child").style.backgroundColor = "orange";
+		document.querySelector("p.intro3 span:last-child").style.backgroundColor = "green";
+
+		//select by attribute;
+		document.querySelectorAll('p[my-attr=greg]')[0].style.backgroundColor = "blue";
+		document.querySelectorAll('p[my-attr=greg]')[0].style.color = "white";
+		document.querySelector('p[my-attr=gregory]').style.backgroundColor = "blue";
+		document.querySelector('p[my-attr=gregory]').style.color = "white";
+
+
+
+		//element.querySelector(".intro");;
+
+
+					/*
+							you can allso use querySelector() and querySelectorAll() on element 
+					*/
+
+					function selectChildData(element){
+
+				//console.log(event.target);
+
+						console.log(element);
+
+						console.log(element.querySelector('.set').getAttribute('data-title'));
+
+
+
+
+						//selects second element based on data-title from NodeList 
+						console.log(element.querySelectorAll('p[data-title]')[2]);
+
+						element.querySelectorAll('p[data-title]').css.style.backgroundColor = "lightblue";
+
+
+
+
+					}
+
+
+
+
+
+
+</script>
+</html>

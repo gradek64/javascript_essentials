@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js_create_element_script</title>
+</head>
+<body>
+
+
+			<div>
+				<h1>create Dom elements</h1>
+				<div class="container"></div>
+				<button id="createElement">create element</button>
+				<div class="info"></div>
+			</div>
+
+			<div id="addScript">
+				<h1>adding scripts to body tag</h1>
+				<div id="container"></div>
+				<button id="addScriptbutton">create element</button>
+				<p id="explaination">
+					method onload could be used for those HTML tags<br><br>
+					Supported HTML tags:	<\body>, <\frame>, <\frameset>, <\iframe>, <\img>, <\input type="image">, <\link>, <\script> and <\style>
+				</p>
+				<div class="info"></div>
+			</div>
+
+			<div id="demo">this is demo</div>
+			<script>
+					//add event listener 
+
+					var button  = document.getElementById('createElement');
+						button.addEventListener('click',clickHandler);
+						function clickHandler(event) {
+							
+							//create paragraph
+							
+							//create paragraph
+							var node = document.createElement("p");                 // Create a <li> node
+							var textnode = document.createTextNode("Water");         // Create a text node
+							node.appendChild(textnode);                              // Append the text to <li>
+							document.getElementById("container").appendChild(node);     // Append <li> to <ul> with id="myList"
+
+
+						}
+
+					    var addScriptbutton  = document.getElementById('addScriptbutton');
+						addScriptbutton.addEventListener('click',scriptClickHanlder);
+						function scriptClickHanlder(event) {
+							
+							function onScriptLoad() {
+							        // Load client in the browser
+							        //$rootScope.$apply(function() { d.resolve(window.d3); });
+							        var info = document.querySelectorAll('#addScript .info')[0];
+							        info.innerHTML = "d3.js script is ready to use";
+
+
+							      }
+
+
+							      // Create a script tag with d3 as the source
+							      // and call our onScriptLoad callback when it
+							      // has been loaded
+							      var scriptTag = document.createElement('script');
+							      scriptTag.type = 'text/javascript'; 
+							      scriptTag.async = true;
+							      scriptTag.src = 'http://d3js.org/d3.v3.min.js';
+
+							      //this is mostly done for http request;
+							      scriptTag.onreadystatechange = function () {
+
+							      		console.log(this.readyState);
+							        if (this.readyState == 'complete') onScriptLoad();
+							      }
+							      //method onload could be used for those HTML tags
+
+							      /*
+
+							      */
+							      scriptTag.onload = onScriptLoad;
+							 
+							      var s = document.getElementsByTagName('body')[0];
+							      s.appendChild(scriptTag);
+
+
+
+
+							      //loading API with callback ;
+
+							      function httpGet(theUrl,callback)
+							      {
+							          var xmlHttp = new XMLHttpRequest();
+							          xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+							          xmlHttp.send();
+							          console.log(xmlHttp);
+							          callback(xmlHttp.responseText);
+							      }
+							     httpGet("http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1",function(data){
+
+							     		console.log(data);
+							     });
+
+
+							     //loading API with checking the laoding state;
+							      function httpGetState(theUrl)
+							      {
+							          var xmlHttp = new XMLHttpRequest();
+							          xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+							          xmlHttp.send();
+							          if(xmlHttp.readyState==4 && xmlHttp.status==200){
+
+							          		console.log(xmlHttp.responseText);
+							          }
+							      }
+							     httpGetState("http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1");
+
+
+
+							     /* function loadXMLDoc() {
+							        var xhttp = new XMLHttpRequest();
+							        xhttp.onreadystatechange = function(data) {
+							          if (this.readyState == 4 && this.status == 200) {
+
+							            document.getElementById("demo").innerHTML = xhttp.responseText.toString();
+							            console.log(this.readyState);
+
+							          }
+							        };
+							        xhttp.open("GET", "http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1", true);
+							        xhttp.send();
+							      }*/
+
+
+						}
+
+			</script>
+</body>
+</html>

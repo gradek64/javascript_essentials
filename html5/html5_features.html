@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html5 feaature</title>
+</head>
+<body>
+
+	<!--data attribute-->
+
+
+	<ul id="unorderedListl">
+		<li class="list" data-atribute="this is my data 1"  ss="newStaff 1" data-border-coolor = "green" > inside</li>
+		<li class="list" data-atribute="this is my data 2"  ss="newStaff 2" data-border-coolor = "red"> 4</li>
+		<li class="list" data-atribute="this is my data 3"  ss="newStaff 3" data-border-coolor = "orange">4</li>
+		<li class="list" data-atribute="this is my data 4"  ss="newStaff 4" data-border-coolor = "black"> 5</li>
+		<li class="list" data-atribute="this is my data 5"  ss="newStaff 5" data-border-coolor = "blue">6 </li>
+	</ul>
+
+	<style>
+		
+		.list:after, .list::after {
+
+			content:attr(ss);
+			color:red;
+			position: absolute;
+			
+			
+		}
+
+		.list {
+			border-width: 1px;
+			border-style: solid;
+		}
+
+	</style>
+
+
+	<script >
+
+	/*
+		the truth is you can specify any attrbute you want doenst know have to be data-* !!
+		
+	*/
+		
+		//in javascript you would acccess this by getAtribute() metod;
+
+		var listElements = document.getElementsByClassName('list');
+		var qS= document.querySelectorAll('.list')
+		var len = listElements.length;
+
+		while(len--){
+			var attr = listElements[len].getAttribute('data-atribute');
+			console.log(len+ ':' + attr);
+
+			//query selector 
+			qS[len].innerHTML = qS[len].getAttribute("ss");
+		}
+
+	</script>
+</body>
+</html>

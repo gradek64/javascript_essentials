@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+
+
+  <body>
+			<div id="peopleModule">
+			<h1>this one done ordinary way</h1>
+			<input type="text" placeholder="name" name="">
+			<button id="addPerson">add person</button>
+			<ul id="people">
+				<script id="people-template" type="text/template">
+					{{#people}}
+					<li>
+						<span>{{.}}</span>
+						<i class="del" style="color:red;">[delete X]</i>
+					</li>
+					{{/people}}
+				</script>
+			</ul>
+			</div>
+
+
+			<div id="peopleModule-object">
+			<h1>this one done object-literal way much cleaner</h1>
+			<input type="text" placeholder="name" name="">
+			<button id="addPerson-object">add person</button>
+			<ul id="people">
+				<script id="people-template-object" type="text/template">
+					{{#people}}
+					<li>
+						<span>{{.}}</span>
+						<i class="del" style="color:red;">[delete X]</i>
+					</li>
+					{{/people}}
+				</script>
+			</ul>
+			</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <script>
+  	
+
+  		var people = [];
+  		var template =$('#people-template').html();
+
+  		$('#peopleModule').find('button').on("click",function(){
+  			people.push( $('#peopleModule').find("input").val() );
+  			//data for mustache template;
+  			var data = {
+  				people:people,
+  			}
+  			$('#peopleModule').find('ul').html(Mustache.render(template,data));
+  			
+
+  		})
+
+  		$('#peopleModule').find('ul').delegate("i.del","click",function(e){
+
+  			var $remove = $(e.target).closest('li');
+
+  			var i = $('#peopleModule').find('ul').find('li').index($remove);
+
+  			$remove.remove();
+
+  			people.splice(i,1);
+
+  			console.log('removed');
+
+  		});
+
+
+
+  </script>
+  <script>
+
+  		//wrap it up in self-exuecting Function so there wont be any globals;
+
+  		(function(){
+  				//scope is restricted to this closure 
+  				var people = {
+  		 			people:['Greg','Sarah'],
+				  	
+				  	init:function(){
+				  		//get Dom elmentes 
+				  		this.cacheDom();
+				  		this.bindEvents();
+				  		this.render();
+
+				  	},
+				  	cacheDom:function() {
+				  		this.$el = $('#peopleModule-object')
+				  		this.$button= this.$el.find('button');
+				  		this.$input = this.$el.find('input');
+				  		this.$ul = this.$el.find('ul');
+				  		//set template here as well;
+				  		this.template = this.$el.find('#people-template-object').html()
+				  	},
+				  	bindEvents:function(){
+				  			//bind event to button 
+				  			this.$button.on("click", this.addPerson.bind(this) );
+				  			this.$ul.delegate("i.del","click", this.deletePerson.bind(this) );
+				  			//events create is own scope so this will reffer to the element clicked
+				  			//if you want to keep  poeple object scope you need to bind it first;
+				  	},
+				  	render:function(){
+
+				  		//data object for mustache template;
+				  		var data = {
+				  			people:this.people,
+				  		}
+				  		this.$ul.html(Mustache.render(this.template,data));
+				  	},
+				  	addPerson:function(){
+				  		//update template;
+				  		this.people.push( this.$input.val() );
+				  		//rerender 
+				  		this.render();
+				  		//clear input field;
+				  		this.$input.val('');
+
+				  	},
+				  	deletePerson:function(event){
+
+				  		var $remove = $(event.target).closest('li');
+				  		var i = this.$ul.find('li').index($remove);
+
+				  		this.people.splice(i,1);
+				  		//rerender 
+				  		this.render();
+
+				  	}
+  					
+  				}
+  				people.init();
+  		})();
+  	
+
+
+
+
+  </script>
+  </body>
+</html>

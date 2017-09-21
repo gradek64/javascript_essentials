@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manipulating dom elements in pure js</title>
+</head>
+<body>
+	<div id="container">
+		<p class="collection">this is paragraph collection</p>
+		<p class="collection">this is paragraph collection</p>
+		<p class="collection">this is paragraph collection</p>
+		<p class="collection">this is paragraph collection</p>
+	</div>
+	<script>
+		
+
+
+		//select elemenst that have class="collection"
+
+		var collection = document.getElementsByClassName('collection');
+		console.log(collection); //it will returns NodeList , so it is not a simple array;
+
+		
+
+		/*
+				but in jQuery you would just do this 
+
+				$('#container').children(); 
+
+				and there you go ...array as clean as it comes ,  but not the case in vanilla javascript;
+
+		*/
+
+
+		var  parentDiv = document.getElementById('container')
+		var  nodeListDivs = document.querySelectorAll('.collection')
+		var  htmlCollectionDivs = document.getElementsByClassName('collection')
+
+
+		//so what is nodeListDivs ?
+		console.log('is our class Collecton an array ? ');
+		console.log(Array.isArray(htmlCollectionDivs)) //=> false
+		console.log('so what is a constructor of our htmlCollectionDivs ?  ');
+		console.log(htmlCollectionDivs.constructor.name); //=> HTMLCollection
+		console.log('content  htmlCollectionDivs ');
+		console.log(htmlCollectionDivs); //=> HTMLCollection
+
+		//so  what it is htmlCollectionDivs?
+		console.log('is our class Collecton an array ? ');
+		console.log(Array.isArray(nodeListDivs)) //=> false
+		console.log('so what is a constructor of our nodeListDivs ?  ');
+		console.log(nodeListDivs.constructor.name); //=> HTMLCollection
+		console.log('content  nodeListDivs ');
+		console.log(nodeListDivs); //=> HTMLCollection
+
+		//same at first !
+		//nodeListDivs.length //=> 4
+		//htmlCollectionDivs.length //=> 4
+
+		//append new child to container
+		var newDiv = document.createElement('div');
+		newDiv.className = 'collection'
+		parentDiv.appendChild(newDiv);
+		//now check if there are any changes;
+
+
+		console.log(nodeListDivs.length) //=> 4
+		/*
+						some NodeList collection are static. but Not all NodeList objects are static. For example, document.getElementByName will return a live NodeList.
+		*/
+		console.log(htmlCollectionDivs.length)//=> 5 //html collectin are always live objects;
+
+
+		//so NodeList either colletion are not a javascript array and nodeListDivs is not dynamically updated;
+
+		//can we convert it to javascript array to get the same functionality as jquery ? yes we can !
+
+		// 1 we can use Array.prototype.splice.call(nodeList) to convert to array 
+
+		var nodelist = document.querySelectorAll('.collection')
+		var collectionArray = Array.from(nodelist);
+		console.log(Array.isArray(collectionArray));
+		console.log(collectionArray.constructor.name); //=> HTMLCollection
+		console.log(collectionArray[0]);
+
+
+
+		//2 array-like object can be converted as below to simple array 
+
+				/*
+						function list() {
+						  return Array.prototype.slice.call(arguments);
+						}
+
+						var list1 = list(1, 2, 3); // [1, 2, 3]
+
+				*/
+
+
+		var nodelist2 = document.querySelectorAll('.collection');
+		var divyArray = Array.prototype.slice.call(nodelist2); //this way you can use slice() arraymethod on NodeList;
+		console.log(Array.isArray(divyArray));
+		console.log(divyArray.constructor.name); //=> HTMLCollection
+		console.log(divyArray);
+
+
+		//the same will apply to the CSS collection 
+		var cssDocument = window.getComputedStyle(document.documentElement, '');
+		console.log(typeof cssDocument);
+		console.log(cssDocument.constructor.name);
+
+		//convert to javascirpt array 
+		var convertedToArray = Array.prototype.slice.call(cssDocument);
+
+		console.log(typeof convertedToArray);
+		console.log(convertedToArray.constructor.name);
+		//now you can use any array method as sort()
+		convertedToArray.sort();
+		console.log(convertedToArray[0]);
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap 3 practice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- Minified CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		
+		.form-group input[type="checkbox"] {
+		    display: none;
+		}
+
+		.form-group input[type="checkbox"] + .btn-group > label span {
+		    width: 20px;
+		}
+
+		.form-group input[type="checkbox"] + .btn-group > label span:first-child {
+		    display: none;
+		}
+		.form-group input[type="checkbox"] + .btn-group > label span:last-child {
+		    display: inline-block;   
+		}
+
+		.form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+		    display: inline-block;
+		}
+		.form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+		    display: none;   
+		}
+
+
+
+
+		/*---------------------------*/
+
+
+		label.btn span {
+		  font-size: 1.5em ;
+		}
+
+		label input[type="radio"] ~ i.fa.fa-circle-o{
+		    color: #c8c8c8;    display: inline;
+		}
+		label input[type="radio"] ~ i.fa.fa-dot-circle-o{
+		    display: none;
+		}
+		label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+		    display: none;
+		}
+		label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
+		    color: #7AA3CC;    display: inline;
+		}
+		label:hover input[type="radio"] ~ i.fa {
+		color: #7AA3CC;
+		}
+
+		label input[type="checkbox"] ~ i.fa.fa-square-o{
+		    color: #c8c8c8;    display: inline;
+		}
+		label input[type="checkbox"] ~ i.fa.fa-check-square-o{
+		    display: none;
+		}
+		label input[type="checkbox"]:checked ~ i.fa.fa-square-o{
+		    display: none;
+		}
+		label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o{
+		    color: #7AA3CC;    display: inline;
+		}
+		label:hover input[type="checkbox"] ~ i.fa {
+		color: #7AA3CC;
+		}
+
+		div[data-toggle="buttons"] label.active{
+		    color: #7AA3CC;
+		}
+
+		div[data-toggle="buttons"] label {
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 2em;
+		text-align: left;
+		white-space: nowrap;
+		vertical-align: top;
+		cursor: pointer;
+		background-color: none;
+		border: 0px solid 
+		#c8c8c8;
+		border-radius: 3px;
+		color: #c8c8c8;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		}
+
+		div[data-toggle="buttons"] label:hover {
+		color: #7AA3CC;
+		}
+
+		div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		}
+
+
+
+
+
+
+
+	</style> 
+
+</head>
+<body>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <br> Vertical radio:
+      <br>
+      <div class="btn-group btn-group-vertical" data-toggle="buttons">
+        <label class="btn active">
+          <input type="radio" name='gender1' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
+        </label>
+        <label class="btn">
+          <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <hr> Vertical checkbox:
+      <br>
+      <div class="btn-group btn-group-vertical" data-toggle="buttons">
+        <label class="btn active">
+          <input type="checkbox" name='email1' checked><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> Marketing Email</span>
+        </label>
+        <label class="btn">
+          <input type="checkbox" name='email2'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Alert Email</span>
+        </label>
+        <label class="btn">
+          <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Account Email</span>
+        </label>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <hr> Horizontal radio:
+      <br>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn active">
+          <input type="radio" name='gender2' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Male</span>
+        </label>
+        <label class="btn">
+          <input type="radio" name='gender2'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Female</span>
+        </label>
+      </div>
+
+
+    </div>
+  </div>
+  <hr> Horizontal checkbox:
+  <br>
+
+  <div class="btn-group btn-group" data-toggle="buttons">
+    <label class="btn active">
+      <input type="checkbox" name='email1' checked><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Marketing Email
+    </label>
+    <label class="btn">
+      <input type="checkbox" name='email2'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Alert Email</span>
+    </label>
+    <label class="btn">
+      <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Account Email</span>
+    </label>
+  </div>
+
+</div>
+</div>
+
+<br>
+</div>
+
+<div class="container">
+    <div class="[ row ]">
+      <h1>Fancy Bootstrap Checkboxes - with Custom Icons </h1>
+    </div>
+    <div class="[ col-xs-12 col-sm-6 ]">
+        <h3>Standard Checkboxes</h3><hr />
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-default" id="fancy-checkbox-default" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-default" class="[ btn btn-default ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-default" class="[ btn btn-default active ]">
+                 Default Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-success" id="fancy-checkbox-success" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-success" class="[ btn btn-success ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-success" class="[ btn btn-default active ]">
+                    Success Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-info" id="fancy-checkbox-info" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-info" class="[ btn btn-info ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-info" class="[ btn btn-default active ]">
+                    Info Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-warning" id="fancy-checkbox-warning" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-warning" class="[ btn btn-warning ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-warning" class="[ btn btn-default active ]">
+                    Warning Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-danger" id="fancy-checkbox-danger" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-danger" class="[ btn btn-danger ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-danger" class="[ btn btn-default active ]">
+                    Danger Checkbox
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="[ col-xs-12 col-sm-6 ]">
+        <h3>Custom Icons Checkboxes</h3><hr />
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-default-custom-icons" id="fancy-checkbox-default-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-default-custom-icons" class="[ btn btn-default ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-default-custom-icons" class="[ btn btn-default active ]">
+                    Default Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary-custom-icons" id="fancy-checkbox-primary-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary-custom-icons" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-primary-custom-icons" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-success-custom-icons" id="fancy-checkbox-success-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-success-custom-icons" class="[ btn btn-success ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-success-custom-icons" class="[ btn btn-default active ]">
+                    Success Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-info-custom-icons" id="fancy-checkbox-info-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-info-custom-icons" class="[ btn btn-info ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-info-custom-icons" class="[ btn btn-default active ]">
+                    Info Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-warning-custom-icons" id="fancy-checkbox-warning-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-warning-custom-icons" class="[ btn btn-warning ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-warning-custom-icons" class="[ btn btn-default active ]">
+                    Warning Checkbox
+                </label>
+            </div>
+        </div>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-danger-custom-icons" id="fancy-checkbox-danger-custom-icons" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-danger-custom-icons" class="[ btn btn-danger ]">
+                    <span class="[ glyphicon glyphicon-plus ]"></span>
+                    <span class="[ glyphicon glyphicon-minus ]"></span>
+                </label>
+                <label for="fancy-checkbox-danger-custom-icons" class="[ btn btn-default active ]">
+                    Danger Checkbox
+                </label>
+              
+                
+              
+            </div>
+          <div class="row">
+
+ <a href="fedtask.com" target="_blank">  Default Checkbox</a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+		<section>
+			<div class="page-header">
+				<h3 class="pull-left">The header</h3>
+				<div class="pull-right">
+					<div class="btn-group">
+						<button class="btn btn-primary">Actions</button>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another Action</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			Contents
+		</section>
+</div>
+<div class="container">
+<div class="row">
+
+		<div class="jumbotron col-md-5 col-sm-12 col-md-offset-4 bg-primary">
+			
+		
+			<form class="form-horizontal" role="form">
+			  <div class="form-group">
+			      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			      <div class="col-sm-10">
+			        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			      </div>
+			  </div>
+			  <div class="[ form-group ]">
+			      <input type="checkbox" name="fancy-checkbox-default" id="fancy-checkbox-default" autocomplete="off" />
+			      <div class="[ btn-group ]">
+			          <label for="fancy-checkbox-default" class="[ btn btn-default ]">
+			              <span class="[ glyphicon glyphicon-ok ]"></span>
+			              <span> </span>
+			          </label>
+			          <label for="fancy-checkbox-default" class="[ btn btn-default active ]">
+			           Default Checkbox
+			          </label>
+			      </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputFile">File input</label>
+			    <input type="file" id="exampleInputFile">
+			    <p class="help-block">Example block-level help text here.</p>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Check me out
+			    </label>
+			  </div>
+			  <style type="text/css">
+			  	
+			  	@media (min-width: 800px) {
+			  	    .custom-pull-right-lg {
+			  	        float: right;/*only pull right for large screens*/
+			  	    }
+			  	}
+
+			  </style>
+			  <button type="submit" class="btn btn-default col-sm-12 col-md-3 custom-pull-right-lg">Submit</button>
+			</form>
+
+		</div>
+
+
+</div>
+<div class="container">
+				  		   <div class="row">
+	   <div class="center-block">
+	      This is an example for center-block
+	   </div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row clear" style="border:1px dotted #ccc">
+			<!--forms-->
+
+
+			<!--   <h1 class="display-3">spacing classes on button and text</h1> -->
+				
+
+				
+			  		<!-- <button type="button" class="btn btn-primary col-md-3" >Primary</button> -->
+
+			  		   <div class = "center-block col-md-3 text-uppercase" style="float:none">
+			  		      this block is center with class: center-block col-md-3 text-uppercase you need aditional <span style="color:red;"> style="color:red;</span>;
+			  		   </div>
+
+
+
+
+			  		<!-- <div class = "pull-right">Quick Float to right</div> -->
+
+<!-- 
+			  		<form  > 
+			  		    <div class="form-group row ">
+			  		        <div class="col-sm-12 col-md-5">
+			  		            <input type="email" class="form-control mb-4" id="exampleInput" aria-describedby="emailHelp" placeholder="Enter email">
+			  		        </div>
+			  		        <div class="col-sm-12 col-md-3">
+			  		            <button type="submit" class="btn btn-primary btn-block text-uppercase bg-primary">Okay!</button>
+			  		        </div>
+			  		    </div>
+			  		</form> -->
+			
+
+
+
+			<!--   <button class="btn">
+			    Profile <span class="badge badge-secondary">9</span>
+			    <span class="sr-only">unread messages</span>
+			  </button>
+			  <p>this is sample text</p> -->
+			
+
+		
+	</div>
+	<div class="row">
+		
+		<div class="clearfix col-12" style="background: #D8D8D8;border: 1px solid #000;padding: 10px;">
+		   <div class="col-3 pull-left" style="background:#58D3F7;">
+		      Quick Float to left
+		   </div>
+		   <div class="col-3 pull-right" style="background: #DA81F5;">
+		      Quick Float to right
+		   </div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="page-header">
+						<h3 class="pull-left">The header</h3>
+						<div class="pull-right">
+							<div class="btn-group">
+								<button class="btn btn-primary">Actions</button>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another Action</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- <div class="row">
+	<div class="jumbotron">
+		<h2>helper classes all togeher</h2>
+		<h2 id="notation">Notation</h2>
+
+		<p>Spacing utilities that apply to all breakpoints, from <code class="highlighter-rouge">xs</code> to <code class="highlighter-rouge">xl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code class="highlighter-rouge">min-width: 0</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
+
+		<p>The classes are named using the format <code class="highlighter-rouge"><span class="p">{</span><span class="err">property</span><span class="p">}{</span><span class="err">sides</span><span class="p">}</span><span class="err">-</span><span class="p">{</span><span class="err">size</span><span class="p">}</span></code> for <code class="highlighter-rouge">xs</code> and <code class="highlighter-rouge"><span class="p">{</span><span class="err">property</span><span class="p">}{</span><span class="err">sides</span><span class="p">}</span><span class="err">-</span><span class="p">{</span><span class="err">breakpoint</span><span class="p">}</span><span class="err">-</span><span class="p">{</span><span class="err">size</span><span class="p">}</span></code> for <code class="highlighter-rouge">sm</code>, <code class="highlighter-rouge">md</code>, <code class="highlighter-rouge">lg</code>, and <code class="highlighter-rouge">xl</code>.</p>
+
+		<p>Where <em>property</em> is one of:</p>
+
+		<ul>
+		  <li><code class="highlighter-rouge">m</code> - for classes that set <code class="highlighter-rouge">margin</code></li>
+		  <li><code class="highlighter-rouge">p</code> - for classes that set <code class="highlighter-rouge">padding</code></li>
+		</ul>
+
+		<p>Where <em>sides</em> is one of:</p>
+
+		<ul>
+		  <li><code class="highlighter-rouge">t</code> - for classes that set <code class="highlighter-rouge">margin-top</code> or <code class="highlighter-rouge">padding-top</code></li>
+		  <li><code class="highlighter-rouge">b</code> - for classes that set <code class="highlighter-rouge">margin-bottom</code> or <code class="highlighter-rouge">padding-bottom</code></li>
+		  <li><code class="highlighter-rouge">l</code> - for classes that set <code class="highlighter-rouge">margin-left</code> or <code class="highlighter-rouge">padding-left</code></li>
+		  <li><code class="highlighter-rouge">r</code> - for classes that set <code class="highlighter-rouge">margin-right</code> or <code class="highlighter-rouge">padding-right</code></li>
+		  <li><code class="highlighter-rouge">x</code> - for classes that set both <code class="highlighter-rouge">*-left</code> and <code class="highlighter-rouge">*-right</code></li>
+		  <li><code class="highlighter-rouge">y</code> - for classes that set both <code class="highlighter-rouge">*-top</code> and <code class="highlighter-rouge">*-bottom</code></li>
+		  <li>blank - for classes that set a <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> on all 4 sides of the element</li>
+		</ul>
+
+		<p>Where <em>size</em> is one of:</p>
+
+		<ul>
+		  <li><code class="highlighter-rouge">0</code> - for classes that eliminate the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> by setting it to <code class="highlighter-rouge">0</code></li>
+		  <li><code class="highlighter-rouge">1</code> - (by default) for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer-x * .25</code> or <code class="highlighter-rouge">$spacer-y * .25</code></li>
+		  <li><code class="highlighter-rouge">2</code> - (by default) for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer-x * .5</code> or <code class="highlighter-rouge">$spacer-y * .5</code></li>
+		  <li><code class="highlighter-rouge">3</code> - (by default) for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer-x</code> or <code class="highlighter-rouge">$spacer-y</code></li>
+		  <li><code class="highlighter-rouge">4</code> - (by default) for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer-x * 1.5</code> or <code class="highlighter-rouge">$spacer-y * 1.5</code></li>
+		  <li><code class="highlighter-rouge">5</code> - (by default) for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer-x * 3</code> or <code class="highlighter-rouge">$spacer-y * 3</code></li>
+		</ul>
+
+		<p>(You can add more sizes by adding entries to the <code class="highlighter-rouge">$spacers</code> Sass map variable.)</p>
+
+		<h3 id="horizontal-centering" class="col-12">Horizontal centering</h3>
+		<p>Additionally, Bootstrap also includes an <code class="highlighter-rouge">.mx-auto</code> class for horizontally centering fixed-width block level content—that is, content that has <code class="highlighter-rouge">display: block</code> and a <code class="highlighter-rouge">width</code> set—by setting the horizontal margins to <code class="highlighter-rouge">auto</code>.</p>
+
+	</div>
+	</div> -->
+	
+</div>
+
+		
+
+
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+Minified JavaScript
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>  
+
+</body>
+</html>

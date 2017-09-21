@@ -1,0 +1,30 @@
+
+var ftGUID_2479478="3444A757E456E5";
+var ftConfID_2479478="0";
+var ftParams_2479478="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=www.tutorialrepublic.com&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-lists.php&cachebuster=83342.71290008922";
+var ftKeyword_2479478="";
+var ftCustom_2479478="";
+var ftSection_2479478="";
+var ftSegment_2479478="icg,htq,o0c,icc,p95,ici";
+var ftSegmentList_2479478=[{s:'icg'},{s:'htq'},{s:'o0c'},{s:'icc'},{s:'p95'},{s:'ici'}];
+var ftRuleMatch_2479478="0";
+var ftTimestamp_2479478="1505296102";
+var ftGeoC2_2479478="uk";
+var ftGeoState_2479478="cmd";
+var ftGeoCity_2479478="camden";
+var ftISP_2479478="global crossing ltd. s 50th st phoenix az 85034 800.414.5028 nccgblx.net";
+var ftSpeed_2479478="broadband";
+var ftDMA_2479478="826044";
+var ftLong_2479478="-0.139441";
+var ftLat_2479478="51.5367";
+var ftPostal_2479478="nw1 0aa";
+var ftTimeZone_2479478="100";
+var ftMobileCarrier_2479478="";
+var ftImp2479478 = {};
+ftImp2479478.privacy = "x";
+ftImp2479478.guidAge = "99";
+ftImp2479478.impID = "35431E73792D68";
+
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/247/2479478/1969392/js/j-2479478-1969392.js" id="ftscript_m2479478" name="ftscript_m2479478"></scr'+'ipt>');
+                    

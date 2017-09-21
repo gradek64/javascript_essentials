@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>closure_revealing_module</title>
+  </head>
+
+
+  <body>
+	
+			<div id="peopleModule-object">
+			<h1>this one done object-literal way much cleaner</h1>
+			<input type="text" placeholder="name" name="">
+			<button id="addPerson-object">add person</button>
+			<ul id="people">
+				<script id="people-template-object" type="text/template">
+					{{#people}}
+					<li>
+						<span>{{.}}</span>
+						<i class="del" style="color:red;">[delete X]</i>
+					</li>
+					{{/people}}
+				</script>
+			</ul>
+			</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+
+  <script>
+
+  		//wrap it up in self-exuecting Function so there wont be any globals;
+
+
+
+  		/*
+
+  			The idea is to expose only those methods and properties 
+  			that are needed for outside 
+  			World in htis case we need to expose only 
+
+  						addPerson 
+  						deletePerson
+
+
+  			the rest should be hidden */
+
+  				//start enclosed object that you would call outside;
+  				var people = (function(){
+
+  						//private method;
+  		 				var people = ['Greg','Sarah'];
+
+  		 				console.log(this);
+				
+				  		//cacheDom() 
+				  		$el = $('#peopleModule-object')
+				  		$button= $el.find('button');
+				  		$input = $el.find('input');
+				  		$ul = $el.find('ul');
+				  		//set template here as well;
+				  		template = $el.find('#people-template-object').html()
+
+			  			//bind event to button 
+			  			$button.on("click", addPerson );
+			  			$ul.delegate("i.del","click", deletePerson );
+			  			//events create is own scope so this will reffer to the element clicked
+			  			//if you want to keep  poeple object scope you need to bind it first;
+
+					  	function render(){
+					  		//data object for mustache template;
+					  		var data = {
+					  			people:people,
+					  		}
+				  			$ul.html(Mustache.render(template,data));
+				  		};
+				  		render();
+
+
+				  		function addPerson(newPerson){
+					  		//update template;
+					  		var newPerson = (typeof newPerson!=="string") ? $input.val() : newPerson;
+					  		people.push( newPerson );
+					  		//rerender 
+					  		render();
+					  		//clear input field;
+					  		$input.val('');
+
+						};
+						function deletePerson(event){
+
+					  		var $remove = $(event.target).closest('li');
+					  		var i = $ul.find('li').index($remove);
+
+					  		people.splice(i,1);
+					  		//rerender 
+					  		render();
+
+						}
+
+
+					//only exposed method that you need to expose not everything, easy to hack ;
+				  	return 	{
+									addPerson:addPerson,
+									deletePerson:deletePerson
+
+							};
+
+  					
+  				})();
+
+
+
+  				//once you have exposed addPerson you can add one easilly here 
+
+  				people.addPerson('Natalka');
+
+  				//people.init(); U dont need init function since IFE self executing function will execute right at the start;
+  		
+  	
+
+
+
+
+  </script>
+  </body>
+</html>

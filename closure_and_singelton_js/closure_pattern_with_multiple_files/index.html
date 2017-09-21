@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>closure_revealing_module</title>
+  </head>
+
+
+  <body>	
+
+  			<div class="stat" style="border: 1px dotted grey;width:200px;">
+  				<span style="display: inline-block;"><h3>show Stats</h3></span>
+	  			<span style="color:green;display: inline-block;" id="show_stats"></span>
+  			</div>
+
+  			<div class="stat" style="border: 1px dotted grey;width:200px;">
+  				<span style="display: inline-block;"><h3>show Names</h3></span>
+	  			<span style="color:green;display: inline-block;" id="showNames"></span>
+  			</div>
+
+			<div id="peopleModule-object">
+			<h1>this one done object-literal way much cleaner</h1>
+			<input type="text" placeholder="name" name="">
+			<button id="addPerson-object">add person</button>
+			<ul id="people">
+				<script id="people-template-object" type="text/template">
+					{{#people}}
+					<li>
+						<span>{{.}}</span>
+						<i class="del" style="color:red;">[delete X]</i>
+					</li>
+					{{/people}}
+				</script>
+			</ul>
+			</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="event_dispatcher.js"></script>
+  <script src="stats.js"></script>
+  <script src="display_names.js"></script>
+  <script src="main_add_people.js"></script>
+
+
+  </body>
+  </html>

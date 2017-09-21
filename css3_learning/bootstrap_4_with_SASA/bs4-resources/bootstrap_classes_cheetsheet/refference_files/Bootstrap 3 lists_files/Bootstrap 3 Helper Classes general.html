@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php -->
+<html lang="en"><!-- InstanceBegin template="/Templates/bootstrap.dwt.php" codeOutsideHTMLIsLocked="false" --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Bootstrap 3 Helper Classes - Tutorial Republic</title>
+    <meta name="description" content="Learn how to use Bootstrap helper classes to perform common tasks like emphasizing text, moving elements to left or right, showing and hiding content, etc.">
+    <!-- InstanceEndEditable -->
+        	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="fb:admins" content="100001054961582">
+<meta property="fb:app_id" content="1404574483159557">
+<meta property="og:image" content="/lib/images/signature.png">
+<link type="image/x-icon" href="https://www.tutorialrepublic.com/favicon.ico" rel="shortcut icon">
+<link type="text/css" href="./Bootstrap 3 Helper Classes general_files/default-1.4.4.css" rel="stylesheet">
+        
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    
+    <script src="./Bootstrap 3 Helper Classes general_files/osd.js"></script><script src="./Bootstrap 3 Helper Classes general_files/ads"></script><script src="./Bootstrap 3 Helper Classes general_files/ads(1)"></script><script src="./Bootstrap 3 Helper Classes general_files/ads(2)"></script><script src="./Bootstrap 3 Helper Classes general_files/ads(3)"></script><script src="./Bootstrap 3 Helper Classes general_files/ads(4)"></script><script async="" type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/gpt.js"></script><script async="" type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/gpt.js"></script><script async="" type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/gpt.js"></script><script async="" type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/gpt.js"></script><script async="" type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/gpt.js"></script><script async="" src="./Bootstrap 3 Helper Classes general_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script><script type="text/javascript" async="" src="./Bootstrap 3 Helper Classes general_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_00a787d849a91d6d88fed0d60c28506f" src="./Bootstrap 3 Helper Classes general_files/s_00a787d849a91d6d88fed0d60c28506f.js" async="async"></script><script type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" id="_bsaPRO_js" src="./Bootstrap 3 Helper Classes general_files/saved_resource" async="async"></script><script src="./Bootstrap 3 Helper Classes general_files/pubads_impl_147.js" async=""></script><link rel="prefetch" href="https://securepubads.g.doubleclick.net/static/glade.js"></head>
+<body>
+    <!--Header-->
+    <!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+<div class="header-wrapper" id="top">
+    <div class="header">
+		<button type="button" class="open-menu mobile-only">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+        <div class="logo">
+            <a href="https://www.tutorialrepublic.com/"><img src="./Bootstrap 3 Helper Classes general_files/logo.png" width="330" height="62" alt="Tutorial Republic"></a>
+        </div>
+        <div class="widget">
+            <div class="submenu">
+                <ul>
+                    <li><a href="https://www.tutorialrepublic.com/about-us.php">About</a></li>
+                    <li><a href="https://www.tutorialrepublic.com/contact-us.php">Contact</a></li>
+                    <li><a href="https://www.tutorialrepublic.com/advertise-with-us.php">Advertise</a></li>
+                </ul>
+            </div>
+            <form action="https://www.google.com/search" method="get" target="_blank" class="site-search">
+				<label class="mobile-only" for="searchInput">Google Search</label>
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch">
+                <input type="text" name="q" placeholder="Google Search" id="searchInput" class="search">
+                <input type="submit" value="" class="search-btn">
+            </form>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/tutorialrepublic" target="_blank" class="facebook">&nbsp;</a></li>
+                    <li><a href="https://twitter.com/tutrepublic" target="_blank" class="twitter">&nbsp;</a></li>
+                    <li><a href="https://plus.google.com/u/0/106987116359359710902" target="_blank" class="google-plus">&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+		<button type="button" class="open-nav mobile-only">
+			<span class="icon-dot"></span>
+			<span class="icon-dot"></span>
+			<span class="icon-dot"></span>
+		</button>
+		<button type="button" class="open-search-box mobile-only">
+			<span class="icon-search"></span>
+		</button>
+    <div class="clear">&nbsp;</div>
+    </div>
+</div>
+<!--Sub Menu-->
+<div class="menu-wrapper">
+    <div class="menu">
+        <ul>
+        	<li><a href="https://www.tutorialrepublic.com/" title="Home Page">HOME</a></li>
+            <li><a href="https://www.tutorialrepublic.com/html-tutorial/" title="HTML5 Tutorial">HTML5</a></li>            
+            <li><a href="https://www.tutorialrepublic.com/css-tutorial/" title="CSS3 Tutorial">CSS3</a></li>
+			<li><a href="https://www.tutorialrepublic.com/jquery-tutorial/" title="jQuery Tutorial">JQUERY</a></li>
+            <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" title="Bootstrap 3 Tutorial">BOOTSTRAP 3</a></li>
+			<li><a href="https://www.tutorialrepublic.com/php-tutorial/" title="PHP 7 Tutorial">PHP 7</a></li> 
+			<li><a href="https://www.tutorialrepublic.com/sql-tutorial/" title="SQL Tutorial">SQL</a></li>
+	     	<li><a href="https://www.tutorialrepublic.com/references.php" title="Web References">REFERENCES</a></li>
+			<li><a href="https://www.tutorialrepublic.com/practice-examples.php" title="Practice Examples and Demos">EXAMPLES</a></li>
+            <li><a href="https://www.tutorialrepublic.com/faq.php" title="Frequently Asked Questions and Answers">FAQ</a></li>
+            <li><a href="https://www.tutorialrepublic.com/snippets/gallery.php" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a></li>
+        </ul>
+	<div class="recent-update"><a href="https://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php" target="_blank">Bootstrap&nbsp;3&nbsp;Button&nbsp;Generator</a></div>
+        <div class="clear">&nbsp;</div>
+    </div>
+</div>    <!--End:Header-->
+    <!--Leader Board-->
+    <div class="top-ad-wrapper">
+        <div class="leaderboard">
+            <div class="ad-box">
+            	<div class="custom-ad">
+                	
+
+<a rel="nofollow" href="https://www.ipage.com/join/index.bml?AffID=776760" target="_blank">
+	<img src="./Bootstrap 3 Helper Classes general_files/ipage-hosting-329x90.png" width="329" height="90" alt="Unlimited Hosting $1.99/month - iPage.com">
+</a>
+
+                </div>
+                <div class="lead-ad">
+                	
+<!--Leaderboard at 2 more Places: CodeLab, Bootstrap Button Generator-->
+
+<div id="leaderboard"><div id="bsap_1302131" class="bsap bsap_1302131" data-serve="C6YI523E">
+<style type="text/css">
+div.bsap_1302131{width:100%;display:block;}div.bsap_1302131 a{width:728px;}div.bsap_1302131 a img{padding:0;}div.bsap_1302131 a em{font-style:normal;}div.bsap_1302131 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302131 img{border:0;clear:right;}
+div.bsap_1302131 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302131 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302131 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302131 a{line-height:100%;}div.bsap_1302131 a.adhere{width:728px;height:90px;line-height:720%;}html>body div.bsap_1302131 a.adhere{width:726px;height:88px;}div.bsap_1302131 img.s{height:0;width:0;}div.bsap_1302131{line-height:9px;}div.bsap_1302131 .bsap_adhere2,div.bsap_1302131 iframe{float:left;}div.bsap_1302131 .bsap_adhere2 a{height:90px;width:20px;background:url(http:\/\/s3.buysellads.com\/ac\/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_1" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_2" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841260', [728, 90], 'div-gpt-ad-1432827207290-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841260 -->
+<div id="div-gpt-ad-1432827207290-0" style="height:90px; width:728px;" data-google-query-id="CN7Cq4T0odYCFYsR0wodXAMPxA">
+<script type="text/javascript" id="auto_3" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827207290-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841260_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./Bootstrap 3 Helper Classes general_files/container.html" id="google_ads_iframe_/8691100/61841260_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_4" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30532, 'C6YI523E', ''); </script>
+
+<div class="bsap_adhere">
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302131?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302131" class="">Advertise Here</a>
+
+</div>
+
+
+<script type="text/javascript" id="auto_5" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div></div>
+<script>
+    var viewportWidth = document.documentElement.clientWidth;
+    if(viewportWidth > 500){
+        // Insert Ad Zone to DOM
+        var adZone = '<div id="bsap_1302131" class="bsarocks bsap_00a787d849a91d6d88fed0d60c28506f"></div>';
+        document.getElementById("leaderboard").innerHTML = adZone;
+    } else{
+        document.body.className = "responsive";
+    }
+</script>                </div>
+            <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <!--End:Leader Board-->
+    <div class="wrapper">
+    <!--Container-->
+    <div class="container">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>BOOTSTRAP</span> BASIC</div>
+<ul class="chapters">
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" class="">Bootstrap Home</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-introduction.php">Bootstrap Introduction</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-get-started.php">Bootstrap Get Started</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php">Bootstrap Grid System</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fixed-layout.php">Bootstrap Fixed Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php">Bootstrap Fluid Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-responsive-layout.php">Bootstrap Responsive Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-typography.php">Bootstrap Typography</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tables.php">Bootstrap Tables</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-lists.php">Bootstrap Lists</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-list-groups.php">Bootstrap List Groups</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php">Bootstrap Forms</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-input-groups.php">Bootstrap Input Groups</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-buttons.php">Bootstrap Buttons</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-button-groups.php">Bootstrap Button Groups</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-images.php">Bootstrap Images</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-media-objects.php">Bootstrap Media Objects</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php">Bootstrap Icons</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-navs.php">Bootstrap Navs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-navbar.php">Bootstrap Navbar</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-panels.php">Bootstrap Panels</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-breadcrumbs.php">Bootstrap Breadcrumbs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-pagination.php">Bootstrap Pagination</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-labels-and-badges.php">Bootstrap Labels &amp; Badges</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-progress-bars.php">Bootstrap Progress Bars</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-jumbotron.php">Bootstrap Jumbotron</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-wells.php">Bootstrap Wells</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php" class="selected">Bootstrap Helper Classes</a></li>
+</ul>
+<div class="segment"><span>BOOTSTRAP</span> ADVANCED</div>
+<ul class="chapters">
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-modals.php">Bootstrap Modals</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-dropdowns.php">Bootstrap Dropdowns</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tabs.php">Bootstrap Tabs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tooltips.php">Bootstrap Tooltips</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-popovers.php">Bootstrap Popovers</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-alerts.php">Bootstrap Alerts</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-stateful-buttons.php">Bootstrap Stateful Buttons</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-accordion.php">Bootstrap Accordion</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-carousel.php">Bootstrap Carousel</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-typeahead.php">Bootstrap Typeahead</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-scrollspy.php">Bootstrap ScrollSpy</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-affix.php">Bootstrap Affix</a></li>
+</ul>
+<div class="segment"><span>BOOTSTRAP</span> EXAMPLES</div>
+<ul>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-examples.php">Bootstrap Practice Examples</a></li>
+	<li><a href="https://www.tutorialrepublic.com/faq.php#bootstrap-less">Bootstrap FAQ's Answers</a></li>
+</ul>        
+        <div class="segment affiliate"><span>SPONSORED</span> LINKS <i></i></div>
+<ul>
+	<li><a rel="nofollow" href="https://www.ipage.com/join/index.bml?AffID=776760" target="_blank">Unlimited Hosting $1.99/mo</a></li>
+	<li><a rel="nofollow" href="https://www.ipage.com/join/index.bml?AffID=776760" target="_blank" style="word-spacing: -1.5px;">WordPress Hosting $3.75/mo</a></li>
+    <li><a rel="nofollow" href="https://www.digitalocean.com/?refcode=483236c4ce2b" target="_blank">Cloud Hosting Only $5/mo</a></li>
+    <li><a href="https://www.tutorialrepublic.com/advertise-with-us.php">Advertise Here</a></li>
+</ul>        </div>
+        <div class="centercolumn">
+            <div class="tutorialbox">
+                <!--Text Content-->
+                <div class="content">
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-wells.php" class="previous-page" title="Go to Previous Page"></a>
+            	<a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-modals.php" class="next-page" title="Go to Next Page"></a>
+                <h1>Bootstrap <span>Helper Classes</span></h1>
+                <p class="definition">In this tutorial you will learn about the Bootstrap helper classes.</p>
+                <h2>Bootstrap Helper Classes</h2>
+                <p class="space">Bootstrap provides a handful of CSS classes for common usages.</p>
+                <h2>Contextual Colors</h2>
+				<p>You can use the contextual color classes like <code>.text-success</code>, <code>.text-info</code>, <code>.text-warning</code> etc. to emphasize the text. See the tutorial on <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-typography.php#contextual-color-classes">Bootstrap typography</a> for more detail.</p>
+                <hr>
+				<h2>Contextual Backgrounds</h2>
+				<p>Similar to the contextual text color classes, you can use the contextual background color classes to set the <code><a href="https://www.tutorialrepublic.com/css-tutorial/css-background.php">background-color</a></code> of an element to apply extra emphasis on them.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=contextual-background-classes" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="html-syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg-primary"</span><span class="cm-tag">&gt;</span>Important: Please read the instructions carefully before proceeding.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg-success"</span><span class="cm-tag">&gt;</span>Success: Your message has been sent successfully.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg-info"</span><span class="cm-tag">&gt;</span>Note: You must agree with the terms and conditions to complete the sign up process.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg-warning"</span><span class="cm-tag">&gt;</span>Warning: There was a problem with your network connection.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg-danger"</span><span class="cm-tag">&gt;</span>Error: An error has been occurred while submitting your data.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=contextual-background-classes" target="_blank">
+                            <img src="./Bootstrap 3 Helper Classes general_files/bootstrap-background-emphasis-classes.png" width="620" height="240" alt="Bootstrap Background Emphasis Classes">
+                        </a>
+                    </div>
+                </div>
+				<!--Note box-->
+				<div class="color-box">
+					<div class="shadow">
+						<div title="Important Notes" class="info-tab note-icon">&nbsp;</div>
+						<div class="note-box">
+							<p><strong>Note:</strong>The contextual background classes only apply the CSS <code><a href="https://www.tutorialrepublic.com/css-tutorial/css-background.php">background-color</a></code> property on the element. To adjust the space between content and border-box you have to set the CSS <code><a href="https://www.tutorialrepublic.com/css-tutorial/css-padding.php">padding</a></code> property yourself.</p>
+						</div>
+					</div>
+				</div>
+				<!--End:Note box-->
+				<hr>
+                <h2>Close Icon</h2>
+                <p>Bootstrap provides a generic close icon that can be used for dismissing modals and alerts.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=close-icon" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"alert alert-warning"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"close"</span> <span class="cm-attribute">data-dismiss</span>=<span class="cm-string">"alert"</span><span class="cm-tag">&gt;</span><span class="cm-atom">&amp;times;</span><span class="cm-tag">&lt;/a&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;strong&gt;</span>Warning!<span class="cm-tag">&lt;/strong&gt;</span> There was a problem with your network connection.</pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=close-icon" target="_blank">
+                            <img src="./Bootstrap 3 Helper Classes general_files/bootstrap-close-icon-demo.png" width="620" height="52" alt="Bootstrap Close Icon Demo">
+                        </a>
+                    </div>
+                </div>
+				<hr>
+                <h2>Caret Icon</h2>
+                <p>Bootstrap provides a generic caret icon to indicate the dropdown functionality. The direction of the caret icon will reverse automatically in dropup menus.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=caret-icon">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter lead-zero">
+                            <li><pre><span class="cm-tag">&lt;ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"nav nav-pills"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"active"</span><span class="cm-tag">&gt;&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag">&gt;</span>Home<span class="cm-tag">&lt;/a&gt;&lt;/li&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;li&gt;&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag">&gt;</span>About<span class="cm-tag">&lt;/a&gt;&lt;/li&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dropdown"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-toggle</span>=<span class="cm-string">"dropdown"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dropdown-toggle"</span><span class="cm-tag">&gt;</span>Services <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"caret"</span><span class="cm-tag">&gt;&lt;/span&gt;&lt;/a&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dropdown-menu"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;li&gt;&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag">&gt;</span>Design<span class="cm-tag">&lt;/a&gt;&lt;/li&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;li&gt;&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag">&gt;</span>Development<span class="cm-tag">&lt;/a&gt;&lt;/li&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;/ul&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;/li&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;/ul&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=caret-icon" target="_blank">
+                            <img src="./Bootstrap 3 Helper Classes general_files/bootstrap-caret-icon-demo.png" width="620" height="40" alt="Bootstrap Caret Icon Demo">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+				<h2>Center Alignment of Content Blocks</h2>
+				<p>You can use the Bootstrap class <code>.center-block</code> to align the content block horizontally center. However, to see the effect of this class you have to set the width of the content block yourself and it should be less than the containing parent element.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=center-aligned-content-block" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"wrapper"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>   <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"center-block"</span><span class="cm-tag">&gt;</span>Center Aligned DIV Box<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<p>See the tutorial on <a href="https://www.tutorialrepublic.com/css-tutorial/css-alignment.php">CSS alignment</a> to learn more about aligning the elements.</p>
+				<hr>
+                <h2>Quick Floats</h2>
+                <p class="space">You can quickly float an element to the left or right using the <code>.pull-left</code> and <code>.pull-right</code> classes. These classes included the CSS <code>!important</code> declaration to avoid specificity issues.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper space">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=pull-left-and-right-classes" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"pull-left"</span><span class="cm-tag">&gt;</span>Floated to left.<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"pull-right"</span><span class="cm-tag">&gt;</span>Floated to right.<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+                <h2>Clearfix</h2>
+                <p>The <code>.clearfix</code> class clears the float on any element. This class is widely used for fixing the <a href="https://www.tutorialrepublic.com/css-tutorial/css-alignment.php#collapsing-parent">collapsing parent</a> issue, where parent element contains floated boxes.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=clearfix-class" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"wrapper clearfix"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>   <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"pull-left"</span><span class="cm-tag">&gt;</span>Float to left<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>   <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"pull-right"</span><span class="cm-tag">&gt;</span>Float to right<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>See the tutorial on <a href="https://www.tutorialrepublic.com/css-tutorial/css-alignment.php">CSS alignment</a> to learn more about clearing floats on an element.</p>
+				<hr>
+				<h2>Showing and Hiding Content</h2>
+				<p>You can force an element to be shown or hidden on all the devices using the <code>.show</code> and <code>.hidden</code> classes. These classes also included the CSS <code>!important</code> declaration to avoid specificity conflicts, just like the quick floats.</p>
+				<p>Furthermore, you can use the class <code>.invisible</code> to toggle only the <a href="https://www.tutorialrepublic.com/css-tutorial/css-visibility.php">visibility</a> of an element; however the element still occupies the space in the layout.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=show-hide-content" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"show"</span><span class="cm-tag">&gt;</span>This is visible to the user.<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden"</span><span class="cm-tag">&gt;</span>This is not visible to the user.<span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"invisible"</span><span class="cm-tag">&gt;</span>This is not visible but affects the layout.<span class="cm-tag">&lt;/div&gt;</span></pre>
+                        </li></ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+				<h2>Content Specific to Screen Readers</h2>
+				<p>The special <code>.sr-only</code> class hides an element to all devices except screen readers.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=screen-reader-content" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;p</span><span class="cm-tag">&gt;</span>This paragraph is visible to all devices.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"sr-only"</span><span class="cm-tag">&gt;</span>This paragraph is only visible to screen readers.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+				<h2>Hide Text Only</h2>
+				<p>You can use the class <code>.text-hide</code> to hide the text content of an element.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=hide-text" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;h1</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text-hide"</span><span class="cm-tag">&gt;</span>The text of this heading is not visible<span class="cm-tag">&lt;/h1&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text-hide"</span><span class="cm-tag">&gt;</span>The text of this paragraph is not visible.<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<!--Warning box-->
+                <div class="color-box">
+                    <div class="shadow">
+                        <div title="Warning" class="info-tab warning-icon">&nbsp;</div>
+                        <div class="warning-box">
+                            <p><strong>Warning:</strong>Think twice before using this class, because it uses the <code>color: transparent</code> and <code>font-size: 0px</code> to hide the text. Search engines consider such techniques as spam that may result in penalty.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Warning box-->
+                <!--Bottom Navigation-->
+                <div class="bottom-link">
+                    <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-wells.php" class="previous-page-bottom">Previous Page</a>
+                    <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-modals.php" class="next-page-bottom">Next Page</a>
+                <div class="clear">&nbsp;</div>
+                </div>
+                <!--End:Bottom Navigation--> 
+                <!-- InstanceEndEditable -->
+                </div>
+                <!--End:Text Content-->
+                <!--Bottom Ads-->
+                <div class="bottom-ad">
+                    
+<!--Rectangle Left-->
+<div class="rectangle-left">
+    
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302152" class="bsap bsap_1302152" data-serve="C6YI5277">
+<style type="text/css">
+div.bsap_1302152{width:100%;display:block;}div.bsap_1302152 a{width:300px;}div.bsap_1302152 a img{padding:0;}div.bsap_1302152 a em{font-style:normal;}div.bsap_1302152 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302152 img{border:0;clear:right;}
+div.bsap_1302152 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302152 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302152 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302152 a{line-height:100%;}div.bsap_1302152 a.adhere{width:300px;height:250px;line-height:2000%;}html>body div.bsap_1302152 a.adhere{width:298px;height:248px;}div.bsap_1302152 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_6" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_7" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841380', [300, 250], 'div-gpt-ad-1432827225581-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841380 -->
+<div id="div-gpt-ad-1432827225581-0" style="height:250px; width:300px;" data-google-query-id="CN64wIT0odYCFaUw0wod1l8IIA">
+<script type="text/javascript" id="auto_8" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827225581-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841380_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Bootstrap 3 Helper Classes general_files/container(1).html" id="google_ads_iframe_/8691100/61841380_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_9" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30630, 'C6YI5277', ''); </script>
+<script type="text/javascript" id="auto_10" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302153" class="bsap bsap_1302153" data-serve="C6YI553E">
+<style type="text/css">
+div.bsap_1302153{width:100%;display:block;}div.bsap_1302153 a{width:300px;}div.bsap_1302153 a img{padding:0;}div.bsap_1302153 a em{font-style:normal;}div.bsap_1302153 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302153 img{border:0;clear:right;}
+div.bsap_1302153 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302153 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302153 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302153 a{line-height:100%;}div.bsap_1302153 a.adhere{width:300px;height:250px;line-height:2000%;}html>body div.bsap_1302153 a.adhere{width:298px;height:248px;}div.bsap_1302153 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_11" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_12" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841500', [300, 250], 'div-gpt-ad-1432827243659-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841500 -->
+<div id="div-gpt-ad-1432827243659-0" style="height:250px; width:300px;" data-google-query-id="CJuC04T0odYCFcgB0wodigAJsA">
+<script type="text/javascript" id="auto_13" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827243659-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841500_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Bootstrap 3 Helper Classes general_files/container(2).html" id="google_ads_iframe_/8691100/61841500_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_14" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30631, 'C6YI553E', ''); </script>
+<script type="text/javascript" id="auto_15" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Rectangle Right-->                <div class="clear">&nbsp;</div>
+                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--Feedback Form-->
+            
+<!--Native Banner-->
+<div class="native-banner">
+    <a href="https://www.tutorialrepublic.com/snippets/gallery.php" target="_blank">
+        <img src="./Bootstrap 3 Helper Classes general_files/bootstrap-snippets.png" alt="Free Bootstrap Snippets and templates">
+    </a>
+</div>
+<!--End:Native Banner-->
+
+<div class="report-error" id="feedback">
+    <div class="contact-form">
+        <span class="close">Close</span>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div>
+                <p class="fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" class="name"></label></p>
+                <p class="fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" class="email"></label></p>
+            <div class="clear">&nbsp;</div>
+            </div>
+            <p><label>Page address <input type="text" name="page-url" id="page-url" disabled="disabled"></label></p>
+            <p><label>Description <textarea name="description" id="description"></textarea></label></p>
+            <p id="feedback-error">We would love to hear from you! Please say something.</p>
+            <p><input type="button" value="Send" class="blue-btn" onclick="sendFeedback()"></p>
+        </form>
+        <div id="response"></div>
+    <div class="clear">&nbsp;</div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>
+        <div class="sidebar">
+            <div class="button-ad">
+                <a href="https://www.tutorialrepublic.com/advertise-with-us.php" class="ad-link">Advertisements</a>
+
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302108" class="bsap bsap_1302108" data-serve="C6YI5KJI">
+<style type="text/css">
+div.bsap_1302108{width:160px;display:block;}div.bsap_1302108 a{width:160px;}div.bsap_1302108 a img{padding:0;}div.bsap_1302108 a em{font-style:normal;}div.bsap_1302108 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0 0 6px 0;text-align:center;text-decoration:none;overflow:hidden;}
+div.bsap_1302108 img{border:0;clear:right;}
+div.bsap_1302108 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302108 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302108 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0 0 6px 0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1302108 a{line-height:100%;}div.bsap_1302108 a.adhere{width:160px;height:100px;line-height:800%;}html>body div.bsap_1302108 a.adhere{width:158px;height:98px;}div.bsap_1302108 img.s{height:0;width:0;}
+</style>
+<!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad -->
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302108?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302108" class="adhere">Advertise Here</a>
+
+
+<script type="text/javascript" id="auto_16" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+
+<!--Skyscraper-->
+<div class="skyscraper primary">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302133" class="bsap bsap_1302133" data-serve="C6YI523L">
+<style type="text/css">
+div.bsap_1302133{width:100%;display:block;}div.bsap_1302133 a{width:160px;}div.bsap_1302133 a img{padding:0;}div.bsap_1302133 a em{font-style:normal;}div.bsap_1302133 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302133 img{border:0;clear:right;}
+div.bsap_1302133 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302133 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302133 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302133 a{line-height:100%;}div.bsap_1302133 a.adhere{width:160px;height:600px;line-height:4800%;}html>body div.bsap_1302133 a.adhere{width:158px;height:598px;}div.bsap_1302133 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_17" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_18" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841740', [160, 600], 'div-gpt-ad-1432827261461-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841740 -->
+<div id="div-gpt-ad-1432827261461-0" style="height:600px; width:160px;" data-google-query-id="CIaK5YT0odYCFWEj0wodfnIAfA">
+<script type="text/javascript" id="auto_19" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827261461-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841740_0__container__" style="border: 0pt none; display: inline-block; width: 160px; height: 600px;"><iframe frameborder="0" src="./Bootstrap 3 Helper Classes general_files/container(3).html" id="google_ads_iframe_/8691100/61841740_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="160" height="600" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_20" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30536, 'C6YI523L', ''); </script>
+<script type="text/javascript" id="auto_21" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Skyscraper-->
+
+
+<!--Skyscraper-->
+<div class="skyscraper">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302896" class="bsap bsap_1302896" data-serve="C67IV53Y">
+<style type="text/css">
+div.bsap_1302896{width:100%;display:block;}div.bsap_1302896 a{width:160px;}div.bsap_1302896 a img{padding:0;}div.bsap_1302896 a em{font-style:normal;}div.bsap_1302896 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302896 img{border:0;clear:right;}
+div.bsap_1302896 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302896 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302896 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302896 a{line-height:100%;}div.bsap_1302896 a.adhere{width:160px;height:600px;line-height:4800%;}html>body div.bsap_1302896 a.adhere{width:158px;height:598px;}div.bsap_1302896 img.s{height:0;width:0;}div.bsap_1302896{line-height:9px;}div.bsap_1302896 .bsap_adhere a{height:19px !important;width:158px !important;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-radius: 0 0 2px 2px;line-height:16px;}.bsap_backfillframe{border:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_22" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_23" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61986940', [160, 600], 'div-gpt-ad-1434115870426-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61986940 -->
+<div id="div-gpt-ad-1434115870426-0" style="height:600px; width:160px;" data-google-query-id="CJOH-IT0odYCFVcT0wods0kDCg">
+<script type="text/javascript" id="auto_24" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1434115870426-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61986940_0__container__" style="border: 0pt none; display: inline-block; width: 160px; height: 600px;"><iframe frameborder="0" src="./Bootstrap 3 Helper Classes general_files/container(4).html" id="google_ads_iframe_/8691100/61986940_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="160" height="600" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_25" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(64765, 'C67IV53Y', ''); </script>
+
+<div class="bsap_adhere">
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302896?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302896" class="">Advertise Here</a>
+
+</div>
+
+
+<script type="text/javascript" id="auto_26" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>            </div>
+        </div>
+    <div class="clear">&nbsp;</div>
+    </div>
+    <!--End:Container-->
+    </div>
+    <!--Footer-->
+	<div class="footer-wrapper">
+	<p class="social-media-link"><span class="appeal-text">Is this website helpful to you? Please give us a like, or share your <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php#feedback" class="feedback">feedback</a>. Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a>, <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> and <a href="https://plus.google.com/u/0/106987116359359710902" target="_blank">Google+</a> for the <i>latest</i> updates.</span></p>
+    <div class="footer">
+        <div class="bottom-menu">
+        	<a href="https://www.tutorialrepublic.com/" class="logo-footer">
+            	<img src="./Bootstrap 3 Helper Classes general_files/logo-transparent.png" width="257" height="48" alt="Tutorial Republic">
+            </a>
+            <p class="copyright-text">Copyright © 2017 Tutorial Republic</p>
+            <ul>
+                <li><a href="https://www.tutorialrepublic.com/terms-of-use.php">Terms of Use</a></li>
+                <li><a href="https://www.tutorialrepublic.com/privacy-policy.php">Privacy Policy</a></li>
+				<li><a class="feedback" href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php#feedback">Report Error</a></li>
+                <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php#top" target="_top">Top</a></li>
+            </ul>
+            <div class="clear">&nbsp;</div>
+        </div>
+        <p class="tools-list" id="tools">
+            <strong>Interactive Tools<span>:</span></strong> 
+            <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a><span>,</span> 
+			<a href="https://www.tutorialrepublic.com/codelab.php?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a><span>,</span>
+            <a href="https://www.tutorialrepublic.com/html-reference/html-color-picker.php">Color Picker</a><span>,</span>
+            <a href="https://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php" target="_blank">Bootstrap Button Generator</a><span>,</span><br> 
+            <a href="https://www.tutorialrepublic.com/html-tutorial/html-url-encode.php#url-encoder">URL Encoder</a><span>,</span>            
+            <a href="https://www.tutorialrepublic.com/faq/how-to-find-number-of-characters-in-a-string-using-jquery.php#string-length-calculator">String Length Calculator</a><span>,</span>
+			<a href="https://www.tutorialrepublic.com/faq/what-is-the-maximum-length-of-title-and-meta-description-tag.php">Title &amp; Meta Length Calculator</a><span>.</span>
+        </p>
+
+    </div>
+</div>
+
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script type="text/javascript">
+[
+  'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+  '/lib/js/default-2.7.js'
+].forEach(function(src) {
+  var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = false; // important
+    script.src = src;
+  (document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script><script type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/jquery.min.js"></script><script type="text/javascript" src="./Bootstrap 3 Helper Classes general_files/default-2.7.js"></script>
+
+<!-- Social widget (footer section) -->
+<div class="social-widget">
+	<a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Facebook"></a>
+	<a id="twitter-share-btn" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Twitter" href="https://twitter.com/share?text=Bootstrap%203%20Helper%20Classes%20-%20&amp;amp;url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php"></a>
+	<a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Google+"></a>
+	<a id="facebook-like-btn" title="Like Us on Facebook"><span id="like-container"></span></a>
+</div>
+<script>
+	var title = document.title.replace('Tutorial Republic', '');
+	document.getElementById('twitter-share-btn').href = 'https://twitter.com/share?text=' + title + '&amp;url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-helper-classes.php';
+</script>
+    <!--End:Footer-->
+
+<!-- InstanceEnd --><iframe id="google_osd_static_frame_7824472681137" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Bootstrap 3 Helper Classes general_files/saved_resource.html"></iframe></body></html>

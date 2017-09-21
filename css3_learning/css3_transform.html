@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3 transform</title>
+</head>
+<body>
+	<div class="property" style="border:2px dotted brown;">
+			<h3>property: transition</h3>
+			<div id="example" >translate(50px, 100px)</div>
+			<div  class="desc">translate(50px, 100px) it will move position of he rectacgle to the right 50px and 100px down</div>
+			<p class="explanation"></p>
+    </div>
+
+
+		<style type="text/css">
+			#example {
+				width: 80px;
+				height: 70px;
+				color: white;
+				position: relative;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 10px;
+				margin-right: 50px;
+				border-radius: 5px;
+				border: 1px solid #000000;
+				background: red;
+				margin: 10px;
+			}
+
+			#example:hover {
+				-ms-transform: translate(50px, 100px); /* IE 9 */
+				 -webkit-transform: translate(50px, 100px); /* Safari */
+				 transform: translate(50px, 100px);
+			}
+
+		</style>
+
+		<div class="property" style="border:2px dotted brown;">
+			<h3>property: scale(2, 3)</h3>
+			<div id="example2" >scale(2, 3)</div>
+			<div  class="desc">scale(2, 3) it will scale up twise width and three times height </div>
+			<p class="explanation"></p>
+        </div>
+
+
+		<style type="text/css">
+			#example2 {
+				width: 80px;
+				height: 70px;
+				color: white;
+				position: relative;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 10px;
+				margin-right: 50px;
+				border-radius: 5px;
+				border: 1px solid #000000;
+				background: red;
+				margin: 10px;
+			}
+
+			#example2:hover {
+					-ms-transform: scale(2, 3); /* IE 9 */
+				    -webkit-transform: scale(2, 3); /* Safari */
+				    transform: scale(2, 3);
+			}
+
+		</style>
+
+				<div class="property" style="border:2px dotted brown;">
+					<h3>property: skew(20deg, 10deg)</h3>
+					<div id="example3" >skew(20deg, 10deg)</div>
+					<div  class="desc">skew(20deg, 10deg) it will skew the element </div>
+					<p class="explanation"></p>
+		        </div>
+
+
+				<style type="text/css">
+					#example3 {
+						width: 80px;
+						height: 70px;
+						color: white;
+						position: relative;
+						font-weight: bold;
+						font-size: 15px;
+						padding: 10px;
+						margin-right: 50px;
+						border-radius: 5px;
+						border: 1px solid #000000;
+						background: red;
+						margin: 10px;
+					}
+
+					#example3:hover {
+							-ms-transform: skew(20deg, 10deg); /* IE 9 */
+							-webkit-transform: skew(20deg, 10deg); /* Safari */
+							transform: skew(20deg, 10deg);
+					}
+
+				</style>
+
+				<div class="property" style="border:2px dotted brown;">
+					<h3>property: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())</h3>
+					<div id="example4" >matrix(1, -0.3, 2, 2, 0, 4)</div>
+					<div  class="desc">matrix(1, -0.3, 2, 2, 0, 4) it will skew the element </div>
+					<p class="explanation"></p>
+		        </div>
+
+
+				<style type="text/css">
+
+					#example4 {
+						width: 80px;
+						height: 70px;
+						color: white;
+						position: relative;
+						font-weight: bold;
+						font-size: 15px;
+						padding: 10px;
+						margin-right: 50px;
+						border-radius: 5px;
+						border: 1px solid #000000;
+						background: red;
+						margin: 10px;
+					}
+
+					#example4:hover {
+							-ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+							-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+							transform: matrix(1, -0.3, 0, 1, 0, 0);
+					}
+
+				</style>
+
+<div id="rotate2D">2D rotate</div> <div  id="rotate3D">3D rotate</div>
+
+
+<style>
+	
+
+	#rotate2D, #rotate3D {
+		display: inline-block;
+	    width: 80px;
+	    height: 70px;
+	    color: white;
+	    position: relative;
+	    font-weight: bold;
+	    font-size: 15px;
+	    padding: 10px;
+	    float: left;
+	    margin-right: 50px;
+	    border-radius: 5px;
+	    border: 1px solid #000000;
+	    background: red;
+	    margin: 10px;
+
+
+	    /* Firefox */
+    	-moz-transition: all 1s ease;
+    	/* WebKit */
+    	-webkit-transition: all 1s ease;
+    	/* Opera */
+    	-o-transition: all 1s ease;
+    	/* Standard */
+    	transition: all 1s ease;
+	}
+
+	#rotate2D:hover {
+
+		    transform: rotate(180deg);
+	}
+	#rotate3D:hover {
+
+
+		    transform: rotateY(180deg);
+	}
+</style>
+
+</body>
+</html>

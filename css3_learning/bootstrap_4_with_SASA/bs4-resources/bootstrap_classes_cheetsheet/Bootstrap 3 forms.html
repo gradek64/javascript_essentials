@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php -->
+<html lang="en"><!-- InstanceBegin template="/Templates/bootstrap.dwt.php" codeOutsideHTMLIsLocked="false" --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>How to Create Form Layouts with Bootstrap 3 - Tutorial Republic</title>
+    <meta name="description" content="Learn how to create different types of form layouts such as vertical form, horizontal form and inline from quickly and easily with the Bootstrap framework.">
+    <!-- InstanceEndEditable -->
+        	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="fb:admins" content="100001054961582">
+<meta property="fb:app_id" content="1404574483159557">
+<meta property="og:image" content="/lib/images/signature.png">
+<link type="image/x-icon" href="https://www.tutorialrepublic.com/favicon.ico" rel="shortcut icon">
+<link type="text/css" href="./refference_files/Bootstrap 3 forms_files/default-1.4.4.css" rel="stylesheet">
+        
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    
+    <script src="./refference_files/Bootstrap 3 forms_files/osd.js"></script><script src="./refference_files/Bootstrap 3 forms_files/ads"></script><script src="./refference_files/Bootstrap 3 forms_files/ads(1)"></script><script src="./refference_files/Bootstrap 3 forms_files/ads(2)"></script><script src="./refference_files/Bootstrap 3 forms_files/ads(3)"></script><script src="./refference_files/Bootstrap 3 forms_files/ads(4)"></script><script async="" type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/gpt.js"></script><script async="" type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/gpt.js"></script><script async="" type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/gpt.js"></script><script async="" type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/gpt.js"></script><script async="" type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/gpt.js"></script><script async="" src="./refference_files/Bootstrap 3 forms_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40117907-1', 'auto');
+  ga('send', 'pageview');
+</script><script type="text/javascript" async="" src="./refference_files/Bootstrap 3 forms_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_00a787d849a91d6d88fed0d60c28506f" src="./refference_files/Bootstrap 3 forms_files/s_00a787d849a91d6d88fed0d60c28506f.js" async="async"></script><script type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" id="_bsaPRO_js" src="./refference_files/Bootstrap 3 forms_files/saved_resource" async="async"></script><script src="./refference_files/Bootstrap 3 forms_files/pubads_impl_147.js" async=""></script></head>
+<body>
+    <!--Header-->
+    <!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+<div class="header-wrapper" id="top">
+    <div class="header">
+		<button type="button" class="open-menu mobile-only">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+        <div class="logo">
+            <a href="https://www.tutorialrepublic.com/"><img src="./refference_files/Bootstrap 3 forms_files/logo.png" width="330" height="62" alt="Tutorial Republic"></a>
+        </div>
+        <div class="widget">
+            <div class="submenu">
+                <ul>
+                    <li><a href="https://www.tutorialrepublic.com/about-us.php">About</a></li>
+                    <li><a href="https://www.tutorialrepublic.com/contact-us.php">Contact</a></li>
+                    <li><a href="https://www.tutorialrepublic.com/advertise-with-us.php">Advertise</a></li>
+                </ul>
+            </div>
+            <form action="https://www.google.com/search" method="get" target="_blank" class="site-search">
+				<label class="mobile-only" for="searchInput">Google Search</label>
+                <input type="hidden" value="www.tutorialrepublic.com" name="sitesearch">
+                <input type="text" name="q" placeholder="Google Search" id="searchInput" class="search">
+                <input type="submit" value="" class="search-btn">
+            </form>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/tutorialrepublic" target="_blank" class="facebook">&nbsp;</a></li>
+                    <li><a href="https://twitter.com/tutrepublic" target="_blank" class="twitter">&nbsp;</a></li>
+                    <li><a href="https://plus.google.com/u/0/106987116359359710902" target="_blank" class="google-plus">&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+		<button type="button" class="open-nav mobile-only">
+			<span class="icon-dot"></span>
+			<span class="icon-dot"></span>
+			<span class="icon-dot"></span>
+		</button>
+		<button type="button" class="open-search-box mobile-only">
+			<span class="icon-search"></span>
+		</button>
+    <div class="clear">&nbsp;</div>
+    </div>
+</div>
+<!--Sub Menu-->
+<div class="menu-wrapper">
+    <div class="menu">
+        <ul>
+        	<li><a href="https://www.tutorialrepublic.com/" title="Home Page">HOME</a></li>
+            <li><a href="https://www.tutorialrepublic.com/html-tutorial/" title="HTML5 Tutorial">HTML5</a></li>            
+            <li><a href="https://www.tutorialrepublic.com/css-tutorial/" title="CSS3 Tutorial">CSS3</a></li>
+			<li><a href="https://www.tutorialrepublic.com/jquery-tutorial/" title="jQuery Tutorial">JQUERY</a></li>
+            <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" title="Bootstrap 3 Tutorial">BOOTSTRAP 3</a></li>
+			<li><a href="https://www.tutorialrepublic.com/php-tutorial/" title="PHP 7 Tutorial">PHP 7</a></li> 
+			<li><a href="https://www.tutorialrepublic.com/sql-tutorial/" title="SQL Tutorial">SQL</a></li>
+	     	<li><a href="https://www.tutorialrepublic.com/references.php" title="Web References">REFERENCES</a></li>
+			<li><a href="https://www.tutorialrepublic.com/practice-examples.php" title="Practice Examples and Demos">EXAMPLES</a></li>
+            <li><a href="https://www.tutorialrepublic.com/faq.php" title="Frequently Asked Questions and Answers">FAQ</a></li>
+            <li><a href="https://www.tutorialrepublic.com/snippets/gallery.php" title="Bootstrap Code Snippets" target="_blank">SNIPPETS</a></li>
+        </ul>
+	<div class="recent-update"><a href="https://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php" target="_blank">Bootstrap&nbsp;3&nbsp;Button&nbsp;Generator</a></div>
+        <div class="clear">&nbsp;</div>
+    </div>
+</div>    <!--End:Header-->
+    <!--Leader Board-->
+    <div class="top-ad-wrapper">
+        <div class="leaderboard">
+            <div class="ad-box">
+            	<div class="custom-ad">
+                	
+
+
+<a rel="nofollow" href="https://www.digitalocean.com/?refcode=483236c4ce2b" target="_blank">
+	<img src="./refference_files/Bootstrap 3 forms_files/digitalocean-329x90.png" width="329" height="90" alt="Cloud Hosting Only $5/mo - digitalocean.com">
+</a>
+                </div>
+                <div class="lead-ad">
+                	
+<!--Leaderboard at 2 more Places: CodeLab, Bootstrap Button Generator-->
+
+<div id="leaderboard"><div id="bsap_1302131" class="bsap bsap_1302131" data-serve="C6YI523E">
+<style type="text/css">
+div.bsap_1302131{width:100%;display:block;}div.bsap_1302131 a{width:728px;}div.bsap_1302131 a img{padding:0;}div.bsap_1302131 a em{font-style:normal;}div.bsap_1302131 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302131 img{border:0;clear:right;}
+div.bsap_1302131 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302131 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302131 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302131 a{line-height:100%;}div.bsap_1302131 a.adhere{width:728px;height:90px;line-height:720%;}html>body div.bsap_1302131 a.adhere{width:726px;height:88px;}div.bsap_1302131 img.s{height:0;width:0;}div.bsap_1302131{line-height:9px;}div.bsap_1302131 .bsap_adhere2,div.bsap_1302131 iframe{float:left;}div.bsap_1302131 .bsap_adhere2 a{height:90px;width:20px;background:url(http:\/\/s3.buysellads.com\/ac\/ah20x90_1.gif) no-repeat 0 0;text-indent:-9999px;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_1" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_2" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841260', [728, 90], 'div-gpt-ad-1432827207290-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841260 -->
+<div id="div-gpt-ad-1432827207290-0" style="height:90px; width:728px;" data-google-query-id="CI72rMTxodYCFQdFGwodOP4Iqw">
+<script type="text/javascript" id="auto_3" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827207290-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841260_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./refference_files/Bootstrap 3 forms_files/container.html" id="google_ads_iframe_/8691100/61841260_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_4" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30532, 'C6YI523E', ''); </script>
+
+<div class="bsap_adhere">
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302131?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302131" class="">Advertise Here</a>
+
+</div>
+
+
+<script type="text/javascript" id="auto_5" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div></div>
+<script>
+    var viewportWidth = document.documentElement.clientWidth;
+    if(viewportWidth > 500){
+        // Insert Ad Zone to DOM
+        var adZone = '<div id="bsap_1302131" class="bsarocks bsap_00a787d849a91d6d88fed0d60c28506f"></div>';
+        document.getElementById("leaderboard").innerHTML = adZone;
+    } else{
+        document.body.className = "responsive";
+    }
+</script>                </div>
+            <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <!--End:Leader Board-->
+    <div class="wrapper">
+    <!--Container-->
+    <div class="container">
+        <div class="leftcolumn" id="myNav">
+		
+        <div class="segment"><span>BOOTSTRAP</span> BASIC</div>
+<ul class="chapters">
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" class="">Bootstrap Home</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-introduction.php">Bootstrap Introduction</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-get-started.php">Bootstrap Get Started</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php">Bootstrap Grid System</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fixed-layout.php">Bootstrap Fixed Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php">Bootstrap Fluid Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-responsive-layout.php">Bootstrap Responsive Layout</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-typography.php">Bootstrap Typography</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tables.php">Bootstrap Tables</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-lists.php">Bootstrap Lists</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-list-groups.php">Bootstrap List Groups</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php" class="selected">Bootstrap Forms</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-input-groups.php">Bootstrap Input Groups</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-buttons.php">Bootstrap Buttons</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-button-groups.php">Bootstrap Button Groups</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-images.php">Bootstrap Images</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-media-objects.php">Bootstrap Media Objects</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php">Bootstrap Icons</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-navs.php">Bootstrap Navs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-navbar.php">Bootstrap Navbar</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-panels.php">Bootstrap Panels</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-breadcrumbs.php">Bootstrap Breadcrumbs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-pagination.php">Bootstrap Pagination</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-labels-and-badges.php">Bootstrap Labels &amp; Badges</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-progress-bars.php">Bootstrap Progress Bars</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-jumbotron.php">Bootstrap Jumbotron</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-wells.php">Bootstrap Wells</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php">Bootstrap Helper Classes</a></li>
+</ul>
+<div class="segment"><span>BOOTSTRAP</span> ADVANCED</div>
+<ul class="chapters">
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-modals.php">Bootstrap Modals</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-dropdowns.php">Bootstrap Dropdowns</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tabs.php">Bootstrap Tabs</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-tooltips.php">Bootstrap Tooltips</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-popovers.php">Bootstrap Popovers</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-alerts.php">Bootstrap Alerts</a></li>
+	<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-stateful-buttons.php">Bootstrap Stateful Buttons</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-accordion.php">Bootstrap Accordion</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-carousel.php">Bootstrap Carousel</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-typeahead.php">Bootstrap Typeahead</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-scrollspy.php">Bootstrap ScrollSpy</a></li>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-affix.php">Bootstrap Affix</a></li>
+</ul>
+<div class="segment"><span>BOOTSTRAP</span> EXAMPLES</div>
+<ul>
+    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-examples.php">Bootstrap Practice Examples</a></li>
+	<li><a href="https://www.tutorialrepublic.com/faq.php#bootstrap-less">Bootstrap FAQ's Answers</a></li>
+</ul>        
+        <div class="segment affiliate"><span>SPONSORED</span> LINKS <i></i></div>
+<ul>
+	<li><a rel="nofollow" href="https://www.ipage.com/join/index.bml?AffID=776760" target="_blank">Unlimited Hosting $1.99/mo</a></li>
+	<li><a rel="nofollow" href="https://www.ipage.com/join/index.bml?AffID=776760" target="_blank" style="word-spacing: -1.5px;">WordPress Hosting $3.75/mo</a></li>
+    <li><a rel="nofollow" href="https://www.digitalocean.com/?refcode=483236c4ce2b" target="_blank">Cloud Hosting Only $5/mo</a></li>
+    <li><a href="https://www.tutorialrepublic.com/advertise-with-us.php">Advertise Here</a></li>
+</ul>        </div>
+        <div class="centercolumn">
+            <div class="tutorialbox">
+                <!--Text Content-->
+                <div class="content">
+                <!-- InstanceBeginEditable name="main_content" -->
+                <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-list-groups.php" class="previous-page" title="Go to Previous Page"></a>
+                <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-input-groups.php" class="next-page" title="Go to Next Page"></a>
+                <h1>Bootstrap <span>Forms</span></h1>
+                <p class="definition">In this tutorial you will learn how to create elegant forms with Bootstrap.</p>
+                <h2>Creating Forms with Bootstrap</h2>
+                <p>HTML forms are the integral part of the web pages and applications, but styling the form controls manually one by one with CSS are often boring and tedious. Bootstrap greatly simplifies the process of styling and alignment of form controls like labels, input fields, selectboxes, textareas, buttons, etc. through predefined set of classes.</p>
+                <p>Bootstrap provides three different types of form layouts:</p>
+                <ul>
+                    <li>Vertical Form (default form layout)</li>
+                    <li>Horizontal Form</li>
+                    <li>Inline Form</li>
+                </ul>
+				<p class="space">The following section will give you the detailed overview of these form layouts as well as the various form related Bootstrap components one by one.</p>
+                <h2>Creating Vertical Form Layout</h2>
+                <p>This is the default Bootstrap form layout in which styles are applied to form controls without adding any base class to the <code><a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php">&lt;form&gt;</a></code> element or any large changes in the markup.</p>
+                <p>The form controls in this layout are stacked with left-aligned labels on the top.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=vertical-form-layout">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter lead-zero">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Email"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputPassword"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span> Remember me<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span><span class="cm-tag">&gt;</span>Login<span class="cm-tag">&lt;/button&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=vertical-form-layout" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-vertical-from-layout.png" width="620" height="212" alt="Bootstrap Vertical Form Layout">
+                        </a>
+                    </div>
+                </div>
+                <!--Note box-->
+                <div class="color-box">
+                    <div class="shadow">
+                        <div title="Important Notes" class="info-tab note-icon">&nbsp;</div>
+                        <div class="note-box">
+                            <p><strong>Note:</strong>In Bootstrap 3 all textual elements like <code><a href="https://www.tutorialrepublic.com/html-reference/html-input-tag.php">&lt;input&gt;</a></code>, <code><a href="https://www.tutorialrepublic.com/html-reference/html-textarea-tag.php">&lt;textarea&gt;</a></code>, and <code><a href="https://www.tutorialrepublic.com/html-reference/html-select-tag.php">&lt;select&gt;</a></code> with the class <code>.form-control</code> are 100% wide by default. To use them inline, you'll have to set a width on the element the form controls used within.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Note box-->
+                <hr>
+                <h2>Creating Horizontal Form Layout</h2>
+                <p>In horizontal form layout labels are right aligned and floated to left to make them appear on the same line as form controls. The horizontal form layout requires the various markup changes from a default form layout. Steps to achieve this layout are listed below:</p>
+                <ul>
+                    <li>Add the class <code>.form-horizontal</code> to the <code><a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php">&lt;form&gt;</a></code> element.</li>
+                    <li>Wrap labels and form controls in a <a href="https://www.tutorialrepublic.com/html-reference/html-div-tag.php"><code>&lt;div&gt;</code></a> element and apply the class <code>.form-group</code>.</li>
+					<li>Use Bootstrap's predefined <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php">grid classes</a> to align labels and form controls.</li>
+                    <li>Add the class <code>.control-label</code> to the <code><a href="https://www.tutorialrepublic.com/html-reference/html-label-tag.php">&lt;label&gt;</a></code> element.</li>
+                </ul>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=horizontal-form-layout">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Email"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span> Remember me<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span><span class="cm-tag">&gt;</span>Login<span class="cm-tag">&lt;/button&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=horizontal-form-layout" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-horizontal-form-layout.png" width="620" height="174" alt="Bootstrap Horizontal Form Layout">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <h2>Creating Inline Form Layout</h2>
+                <p>Sometimes you might require to place the form controls side-by-side to compact the layout. You can do this easily by adding the Bootstrap class <code>.form-inline</code> to the <code><a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php">&lt;form&gt;</a></code> element.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=inline-form-layout">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter lead-zero">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-inline"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"sr-only"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Email"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"sr-only"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputPassword"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span> Remember me<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span><span class="cm-tag">&gt;</span>Login<span class="cm-tag">&lt;/button&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=inline-form-layout" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-inline-form-layout.png" width="620" height="34" alt="Bootstrap Inline Form Layout">
+                        </a>
+                    </div>
+                </div>
+                <p>You can check out the examples of some beautifully designed Bootstrap form <a href="https://www.tutorialrepublic.com/snippets/gallery.php?tag=form" target="_blank">here</a>.</p>
+                <!--Note box-->
+                <div class="color-box">
+                    <div class="shadow">
+                        <div title="Important Notes" class="info-tab note-icon">&nbsp;</div>
+                        <div class="note-box">
+                            <p><strong>Note:</strong>It is recommended to include a label for every form inputs otherwise screen readers will have trouble with your forms. However in case of inline form layout you can hide these labels using the <code>.sr-only</code> class.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End:Note box-->
+                <hr>
+				<h2>Static Form Control</h2>
+                <p>There might be a situation when you need to place just plain text next to a form label instead of a form control. You can do this within a horizontal form layout by using the <br><code>.form-control-static</code> class on a <code><a href="https://www.tutorialrepublic.com/html-reference/html-p-tag.php">&lt;p&gt;</a></code> element, like this:</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=static-form-control">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control-static"</span><span class="cm-tag">&gt;</span>harrypotter@mail.com<span class="cm-tag">&lt;/p&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>                <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span> Remember me<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span><span class="cm-tag">&gt;</span>Login<span class="cm-tag">&lt;/button&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=static-form-control" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-static-form-control.png" width="620" height="174" alt="Bootstrap Static Form Control">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+				<h2 id="checkbox-and-radio">Placement of Checkboxes and Radios</h2>
+				<p>Checkboxes and radio buttons can be placed either <em>stacked</em> or <em>inline</em>.</p>
+				<h3>Stacked Checkboxes and Radios</h3>
+				<p>To place the checkboxes or radio buttons vertically stacked i.e. line by line, just wrap each control in a <code>&lt;div&gt;</code> element and apply the class <code>.checkbox</code> or <code>.radio</code>, like this:</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=stacked-checkbox-and-radio-buttons" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Vertically stacked checkboxes --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Cricket<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Football<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Tennis<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    </pre></li>
+							<li><pre>    <span class="cm-comment">&lt;!-- Vertically stacked radios --&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"gender"</span><span class="cm-tag">&gt;</span> Male<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"gender"</span><span class="cm-tag">&gt;</span> Female<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<h3>Inline Checkboxes and Radios</h3>
+				<p>However, to place them inline i.e. side-by-side just use the class <code>.checkbox-inline</code> or <code>.radio-inline</code> on the <code>&lt;label&gt;</code> element, as shown in the following example. No need to wrap the controls in a <code>&lt;div&gt;</code> element unlike stacked version.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=inline-checkbox-and-radio-buttons" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Inline checkboxes --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Cricket<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Football<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"sports"</span><span class="cm-tag">&gt;</span> Tennis<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    </pre></li>
+							<li><pre>    <span class="cm-comment">&lt;!-- Inline radios --&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"gender"</span><span class="cm-tag">&gt;</span> Male<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"gender"</span><span class="cm-tag">&gt;</span> Female<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+                <h2>Height Sizing of Inputs and Select Boxes</h2>
+                <p>You can easily control the height of your input and select boxes to match the <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-buttons.php">button sizes</a>. The Bootstrap's relative sizing classes like <code>.input-lg</code>, <code>.input-sm</code> can be used both on <code><a href="https://www.tutorialrepublic.com/html-reference/html-input-tag.php">&lt;input&gt;</a></code> and <code><a href="https://www.tutorialrepublic.com/html-reference/html-select-tag.php">&lt;select&gt;</a></code> boxes to create it's larger or smaller sizes.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=height-sizing-of-form-controls">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control input-lg"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Large input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control input-lg"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;option&gt;</span>Large select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;br&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Default input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;option&gt;</span>Default select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;br&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control input-sm"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Small input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-6"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control input-sm"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;option&gt;</span>Small select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+						</ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <hr>
+                <h2>Column Sizing of Inputs, Textareas and Select Boxes</h2>
+                <p>You can also match the sizes of your form controls to the Bootstrap grid column sizes. Just wrap your form controls (i.e. <code><a href="https://www.tutorialrepublic.com/html-reference/html-input-tag.php">&lt;input&gt;</a></code>, <code><a href="https://www.tutorialrepublic.com/html-reference/html-textarea-tag.php">&lt;textarea&gt;</a></code>, and <code><a href="https://www.tutorialrepublic.com/html-reference/html-select-tag.php">&lt;select&gt;</a></code>) in grid columns, or any custom element and apply the <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php">grid classes</a> on it.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=grid-sizing-of-form-controls">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-4"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-5"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;br&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;&lt;/textarea&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-4"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;&lt;/textarea&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-5"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;&lt;/textarea&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;br&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;option&gt;</span>Select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-4"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;option&gt;</span>Select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-5"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;option&gt;</span>Select<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <hr>
+				<h2>Height Sizing of Form Groups</h2>
+				<p>You can add the relative form sizing classes such as <code>.form-group-lg</code> or <code>.form-group-sm</code> to the <code>.form-group</code> itself to make both the labels and form controls larger or smaller at the same time within the horizontal form layouts.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=height-sizing-of-form-groups">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-double-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group form-group-lg"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-3 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputLarge"</span><span class="cm-tag">&gt;</span>Large label<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputLarge"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Large input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-3 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputDefault"</span><span class="cm-tag">&gt;</span>Default label<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputDefault"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Default input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group form-group-sm"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-3 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputSmall"</span><span class="cm-tag">&gt;</span>Small label<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-sm-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputSmall"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Small input"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+                <h2>Creating Disabled and Readonly Inputs</h2>
+                <p>To create disabled text based inputs just add the attributes <code>disabled</code> to the <code><a href="https://www.tutorialrepublic.com/html-reference/html-input-tag.php">&lt;input&gt;</a></code> element as shown in example below and Bootstrap will do the rest.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=disabled-inputs">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Disabled input"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow break">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=disabled-inputs" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-disabled-inputs.png" width="620" height="34" alt="Bootstrap Disabled Inputs">
+                        </a>
+                    </div>
+                </div>
+				<p>However, in case of checkboxes and radio buttons, along with the <code>disabled</code> attribute you'll also need to apply the <code>.disabled</code> class on its parent <code>.checkbox</code>, <code>.radio</code>, <code>.checkbox-inline</code> or <code>.radio-inline</code> element (see <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php#checkbox-and-radio">placement of checkboxes and radios</a>), otherwise the browser will not show the <a href="https://www.tutorialrepublic.com/css-reference/css-cursor-property.php">"<code>not-allowed</code>" cursor</a> when you put the mouse pointer on label text.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=disabled-checkboxes-and-radios" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Disabled stacked checkboxes --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Disabled checkbox<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Another disabled checkbox<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span>  </pre></li>
+							<li><pre>    </pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Disabled stacked radios --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Disabled radio<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Another disabled radio<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    </pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Disabled inline checkboxes --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;p&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline disabled"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Disabled checkbox<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline disabled"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Another disabled checkbox<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/p&gt;</span></pre></li>
+							<li><pre>    </pre></li>
+							<li class="alt"><pre>    <span class="cm-comment">&lt;!-- Disabled inline radios --&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;p&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline disabled"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Disabled radio<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline disabled"</span><span class="cm-tag">&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span> Another disabled radio<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/p&gt;</span></pre></li>
+							<li><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<p>Similarly, you can use the <code>readonly</code> attribute to create read only text based input controls that prevent user inputs and give the style same as disabled.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=readonly-inputs">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Readonly input"</span> <span class="cm-attribute">readonly</span>=<span class="cm-string">"readonly"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <hr>
+				<h2>Creating Disabled Fieldsets</h2>
+				<p>Rather than disabling the form controls individually, you can also disable all form controls within a fieldset at once by adding the <code>disabled</code> attribute to the <code><a href="https://www.tutorialrepublic.com/html-reference/html-fieldset-tag.php">&lt;fieldset&gt;</a></code> element.</p>
+				<!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=disabled-fieldsets">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;fieldset</span> <span class="cm-attribute">disabled</span>=<span class="cm-string">"disabled"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Email"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-2"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputPassword"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>                <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>                    <span class="cm-tag">&lt;label&gt;&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag">&gt;</span> Remember me<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li><pre>                <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-2 col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>                <span class="cm-tag">&lt;button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span><span class="cm-tag">&gt;</span>Login<span class="cm-tag">&lt;/button&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/fieldset&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=disabled-fieldsets" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-disabled-fieldsets.png" width="620" height="189" alt="Bootstrap Disabled Fieldsets">
+                        </a>
+                    </div>
+                </div>
+				<hr>
+                <h2>Placing Help Text around Form Controls</h2>
+                <p>Placing help text for the form controls in an efficient way to guide users to enter the correct data in a form. You can place block level help text for the form controls using the class <code>.help-block</code>. The help text is typically displayed at the bottom of the control.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=block-help-text">Try this code <span>»</span></a></div>
+                        <ul class="syntax-highlighter">
+                            <li><pre><span class="cm-tag">&lt;form&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>A block of help text that breaks onto a new line and may extend beyond one line.<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=block-help-text" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-block-help-text.png" width="620" height="59" alt="Bootstrap Block Help Text">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <h2>Bootstrap Form Validation States</h2>
+                <p>Bootstrap provides easy to use and powerful mechanism for styling input controls to present different validation states. Bootstrap includes validation styles for error, warning, and success messages. To use, just add the appropriate class to the surrounding <code>.form-group</code>.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=forms-validation-states">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-success"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputSuccess"</span><span class="cm-tag">&gt;</span>Username<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputSuccess"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with success"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Username is available<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-warning"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputWarning"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputWarning"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with warning"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Password strength: Weak<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-error"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputError"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputError"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with error"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Please enter a valid email address<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+                <p>— The output of the above example will look something like this:</p>
+                <div class="shadow break">
+                    <div class="preview-box">
+                        <a href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=forms-validation-states" target="_blank">
+                            <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-forms-validation-states.png" width="620" height="237" alt="Bootstrap Form Validation States">
+                        </a>
+                    </div>
+                </div>
+				<p>You can also add optional feedback icons to your inputs using the class <code>.has-feedback</code> on <code>.form-group</code> and the right glyphicon, like this:</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=inputs-with-feedback-icons">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-success has-feedback"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputSuccess"</span><span class="cm-tag">&gt;</span>Username<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputSuccess"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with success"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"glyphicon glyphicon-ok form-control-feedback"</span><span class="cm-tag">&gt;&lt;/span&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Username is available<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-warning has-feedback"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputWarning"</span><span class="cm-tag">&gt;</span>Password<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputWarning"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with warning"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"glyphicon glyphicon-warning-sign form-control-feedback"</span><span class="cm-tag">&gt;&lt;/span&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Password strength: Weak<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group has-error has-feedback"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2 control-label"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputError"</span><span class="cm-tag">&gt;</span>Email<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-10"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputError"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Input with error"</span><span class="cm-tag">&gt;</span></pre></li>
+                            <li class="alt"><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"glyphicon glyphicon-remove form-control-feedback"</span><span class="cm-tag">&gt;&lt;/span&gt;</span></pre></li>
+                            <li><pre>            <span class="cm-tag">&lt;span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"help-block"</span><span class="cm-tag">&gt;</span>Please enter a valid email address<span class="cm-tag">&lt;/span&gt;</span></pre></li>
+                            <li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<hr>
+                <h2>Supported Form Controls in Bootstrap</h2>
+                <p>Bootstrap includes support for all standard form controls as well as <a href="https://www.tutorialrepublic.com/html-tutorial/html5-new-input-types.php">new HTML5 input types</a> such as datetime, number, email, url, search, tel, color etc. The following example will show you the usages of standard form controls with Bootstrap.</p>
+                <!--Code box-->
+                <div class="codebox-wrapper break">
+                    <div class="codebox">
+                        <div class="codebox-title"><h4>Example</h4><a title="Try this code using online Editor" class="try-btn" target="_blank" href="https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&amp;file=supported-from-controls">Try this code <span>»</span></a><span class="box-size"><i title="Maximize"></i></span></div>
+                        <ul class="syntax-highlighter lead-double-zero scroll large">
+                            <li><pre><span class="cm-tag">&lt;form</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-horizontal"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"firstName"</span><span class="cm-tag">&gt;</span>First Name:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"firstName"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"First Name"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"lastName"</span><span class="cm-tag">&gt;</span>Last Name:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"lastName"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Last Name"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+                            <li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"inputEmail"</span><span class="cm-tag">&gt;</span>Email Address:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"inputEmail"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Email Address"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"phoneNumber"</span><span class="cm-tag">&gt;</span>Phone Number:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"tel"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"phoneNumber"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Phone Number"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span><span class="cm-tag">&gt;</span>Date of Birth:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;option&gt;</span>Date<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;option&gt;</span>Month<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-3"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;option&gt;</span>Year<span class="cm-tag">&lt;/option&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/select&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"postalAddress"</span><span class="cm-tag">&gt;</span>Postal Address:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;textarea</span> <span class="cm-attribute">rows</span>=<span class="cm-string">"3"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"postalAddress"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Postal Address"</span><span class="cm-tag">&gt;&lt;/textarea&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span> <span class="cm-attribute">for</span>=<span class="cm-string">"ZipCode"</span><span class="cm-tag">&gt;</span>Zip Code:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"ZipCode"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Zip Code"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label col-xs-3"</span><span class="cm-tag">&gt;</span>Gender:<span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"genderRadios"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"male"</span><span class="cm-tag">&gt;</span> Male</pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-2"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"radio-inline"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"genderRadios"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"female"</span><span class="cm-tag">&gt;</span> Female</pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-3 col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"news"</span><span class="cm-tag">&gt;</span> Send me latest news and updates.</pre></li>
+							<li><pre>            <span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-3 col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"checkbox-inline"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>                <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"agree"</span><span class="cm-tag">&gt;</span>  I agree to the <span class="cm-tag">&lt;a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag">&gt;</span>Terms and Conditions<span class="cm-tag">&lt;/a&gt;</span>.</pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;/label&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;br&gt;</span></pre></li>
+							<li class="alt"><pre>    <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>        <span class="cm-tag">&lt;div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-xs-offset-3 col-xs-9"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-primary"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Submit"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li><pre>            <span class="cm-tag">&lt;input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"reset"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"btn btn-default"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Reset"</span><span class="cm-tag">&gt;</span></pre></li>
+							<li class="alt"><pre>        <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li><pre>    <span class="cm-tag">&lt;/div&gt;</span></pre></li>
+							<li class="alt"><pre><span class="cm-tag">&lt;/form&gt;</span></pre></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End:Code box-->
+				<p>In the next chapter you will learn how to create interactive text-based input controls for your forms using the <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-input-groups.php">Bootstrap input group</a> component.</p>
+                <!--Bottom Navigation-->
+                <div class="bottom-link">
+                    <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-list-groups.php" class="previous-page-bottom">Previous Page</a>
+                    <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-input-groups.php" class="next-page-bottom">Next Page</a>
+                <div class="clear">&nbsp;</div>
+                </div>
+                <!--End:Bottom Navigation-->
+                <!-- InstanceEndEditable -->
+                </div>
+                <!--End:Text Content-->
+                <!--Bottom Ads-->
+                <div class="bottom-ad">
+                    
+<!--Rectangle Left-->
+<div class="rectangle-left">
+    
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302152" class="bsap bsap_1302152" data-serve="C6YI5277">
+<style type="text/css">
+div.bsap_1302152{width:100%;display:block;}div.bsap_1302152 a{width:300px;}div.bsap_1302152 a img{padding:0;}div.bsap_1302152 a em{font-style:normal;}div.bsap_1302152 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302152 img{border:0;clear:right;}
+div.bsap_1302152 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302152 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302152 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302152 a{line-height:100%;}div.bsap_1302152 a.adhere{width:300px;height:250px;line-height:2000%;}html>body div.bsap_1302152 a.adhere{width:298px;height:248px;}div.bsap_1302152 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_6" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_7" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841380', [300, 250], 'div-gpt-ad-1432827225581-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841380 -->
+<div id="div-gpt-ad-1432827225581-0" style="height:250px; width:300px;" data-google-query-id="CMWO8sPxodYCFdJsGwodaZ0CFg">
+<script type="text/javascript" id="auto_8" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827225581-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841380_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./refference_files/Bootstrap 3 forms_files/container(1).html" id="google_ads_iframe_/8691100/61841380_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_9" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30630, 'C6YI5277', ''); </script>
+<script type="text/javascript" id="auto_10" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Rectangle Left-->
+
+
+<!--Rectangle Right-->
+<div class="rectangle-right">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302153" class="bsap bsap_1302153" data-serve="C6YI553E">
+<style type="text/css">
+div.bsap_1302153{width:100%;display:block;}div.bsap_1302153 a{width:300px;}div.bsap_1302153 a img{padding:0;}div.bsap_1302153 a em{font-style:normal;}div.bsap_1302153 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302153 img{border:0;clear:right;}
+div.bsap_1302153 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302153 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302153 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302153 a{line-height:100%;}div.bsap_1302153 a.adhere{width:300px;height:250px;line-height:2000%;}html>body div.bsap_1302153 a.adhere{width:298px;height:248px;}div.bsap_1302153 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_11" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_12" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841500', [300, 250], 'div-gpt-ad-1432827243659-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841500 -->
+<div id="div-gpt-ad-1432827243659-0" style="height:250px; width:300px;" data-google-query-id="CJLD1sPxodYCFZM-GwodyOoOBw">
+<script type="text/javascript" id="auto_13" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827243659-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841500_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./refference_files/Bootstrap 3 forms_files/container(2).html" id="google_ads_iframe_/8691100/61841500_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_14" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30631, 'C6YI553E', ''); </script>
+<script type="text/javascript" id="auto_15" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Rectangle Right-->                <div class="clear">&nbsp;</div>
+                </div>
+                <!--End:Bottom Ads-->
+            </div>
+            <!--Feedback Form-->
+            
+<!--Native Banner-->
+<div class="native-banner">
+    <a href="https://www.tutorialrepublic.com/snippets/gallery.php" target="_blank">
+        <img src="./refference_files/Bootstrap 3 forms_files/bootstrap-snippets.png" alt="Free Bootstrap Snippets and templates">
+    </a>
+</div>
+<!--End:Native Banner-->
+
+<div class="report-error" id="feedback">
+    <div class="contact-form">
+        <span class="close">Close</span>
+        <form id="feedback-form">
+            <h3>Your Feedback:</h3>
+            <div>
+                <p class="fl"><label>Your Name (optional) <input type="text" name="user-name" id="user-name" class="name"></label></p>
+                <p class="fr"><label>Your E-mail (optional) <input type="text" name="user-email" id="user-email" class="email"></label></p>
+            <div class="clear">&nbsp;</div>
+            </div>
+            <p><label>Page address <input type="text" name="page-url" id="page-url" disabled="disabled"></label></p>
+            <p><label>Description <textarea name="description" id="description"></textarea></label></p>
+            <p id="feedback-error">We would love to hear from you! Please say something.</p>
+            <p><input type="button" value="Send" class="blue-btn" onclick="sendFeedback()"></p>
+        </form>
+        <div id="response"></div>
+    <div class="clear">&nbsp;</div>
+    </div>           
+</div>            <!--End:Feedback Form-->
+        </div>
+        <div class="sidebar">
+            <div class="button-ad">
+                <a href="https://www.tutorialrepublic.com/advertise-with-us.php" class="ad-link">Advertisements</a>
+
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302108" class="bsap bsap_1302108" data-serve="C6YI5KJI">
+<style type="text/css">
+div.bsap_1302108{width:160px;display:block;}div.bsap_1302108 a{width:160px;}div.bsap_1302108 a img{padding:0;}div.bsap_1302108 a em{font-style:normal;}div.bsap_1302108 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0 0 6px 0;text-align:center;text-decoration:none;overflow:hidden;}
+div.bsap_1302108 img{border:0;clear:right;}
+div.bsap_1302108 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302108 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302108 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0 0 6px 0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1302108 a{line-height:100%;}div.bsap_1302108 a.adhere{width:160px;height:100px;line-height:800%;}html>body div.bsap_1302108 a.adhere{width:158px;height:98px;}div.bsap_1302108 img.s{height:0;width:0;}
+</style>
+<!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad -->
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302108?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302108" class="adhere">Advertise Here</a>
+
+
+<script type="text/javascript" id="auto_16" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+
+<!--Skyscraper-->
+<div class="skyscraper primary">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302133" class="bsap bsap_1302133" data-serve="C6YI523L">
+<style type="text/css">
+div.bsap_1302133{width:100%;display:block;}div.bsap_1302133 a{width:160px;}div.bsap_1302133 a img{padding:0;}div.bsap_1302133 a em{font-style:normal;}div.bsap_1302133 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302133 img{border:0;clear:right;}
+div.bsap_1302133 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302133 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302133 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302133 a{line-height:100%;}div.bsap_1302133 a.adhere{width:160px;height:600px;line-height:4800%;}html>body div.bsap_1302133 a.adhere{width:158px;height:598px;}div.bsap_1302133 img.s{height:0;width:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_17" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_18" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61841740', [160, 600], 'div-gpt-ad-1432827261461-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61841740 -->
+<div id="div-gpt-ad-1432827261461-0" style="height:600px; width:160px;" data-google-query-id="CJOOg8TxodYCFQIYGwodwWQBng">
+<script type="text/javascript" id="auto_19" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1432827261461-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61841740_0__container__" style="border: 0pt none; display: inline-block; width: 160px; height: 600px;"><iframe frameborder="0" src="./refference_files/Bootstrap 3 forms_files/container(3).html" id="google_ads_iframe_/8691100/61841740_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="160" height="600" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_20" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(30536, 'C6YI523L', ''); </script>
+<script type="text/javascript" id="auto_21" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>
+<!--End:Skyscraper-->
+
+
+<!--Skyscraper-->
+<div class="skyscraper">
+
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1302896" class="bsap bsap_1302896" data-serve="C67IV53Y">
+<style type="text/css">
+div.bsap_1302896{width:100%;display:block;}div.bsap_1302896 a{width:160px;}div.bsap_1302896 a img{padding:0;}div.bsap_1302896 a em{font-style:normal;}div.bsap_1302896 a{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1302896 img{border:0;clear:right;}
+div.bsap_1302896 a.adhere{color:#8ba8c6;font-weight:bold;font-size:12px;border:1px solid #ebecf0;background:#ebecf0;text-align:center;}
+div.bsap_1302896 a.adhere:hover{border:1px solid #e2e3e9;background:#e2e3e9;color:#6d86a3;}
+div.bsap_1302896 iframe{display:block;font-size:11px;color:#8ba8c6;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1302896 a{line-height:100%;}div.bsap_1302896 a.adhere{width:160px;height:600px;line-height:4800%;}html>body div.bsap_1302896 a.adhere{width:158px;height:598px;}div.bsap_1302896 img.s{height:0;width:0;}div.bsap_1302896{line-height:9px;}div.bsap_1302896 .bsap_adhere a{height:19px !important;width:158px !important;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-radius: 0 0 2px 2px;line-height:16px;}.bsap_backfillframe{border:0;}
+</style>
+<!--INLINE--><script type="text/javascript" id="auto_22" class="ignoreme">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type="text/javascript" id="auto_23" class="ignoreme">
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8691100/61986940', [160, 600], 'div-gpt-ad-1434115870426-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /8691100/61986940 -->
+<div id="div-gpt-ad-1434115870426-0" style="height:600px; width:160px;" data-google-query-id="CNjLl8TxodYCFcIWGwodzakOmA">
+<script type="text/javascript" id="auto_24" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1434115870426-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/61986940_0__container__" style="border: 0pt none; display: inline-block; width: 160px; height: 600px;"><iframe frameborder="0" src="./refference_files/Bootstrap 3 forms_files/container(4).html" id="google_ads_iframe_/8691100/61986940_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="160" height="600" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+<script type="text/javascript" id="auto_25" class="ignoreme"> if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(64765, 'C67IV53Y', ''); </script>
+
+<div class="bsap_adhere">
+
+<a href="http://www.buysellads.com/buy/detail/262264/zone/1302896?utm_source=site_262264&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1302896" class="">Advertise Here</a>
+
+</div>
+
+
+<script type="text/javascript" id="auto_26" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<!-- End BuySellAds Zone Code -->
+
+</div>            </div>
+        </div>
+    <div class="clear">&nbsp;</div>
+    </div>
+    <!--End:Container-->
+    </div>
+    <!--Footer-->
+	<div class="footer-wrapper">
+	<p class="social-media-link"><span class="appeal-text">Is this website helpful to you? Please give us a like, or share your <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php#feedback" class="feedback">feedback</a>. Connect with us on <a href="https://www.facebook.com/tutorialrepublic" target="_blank">Facebook</a>, <a href="https://twitter.com/tutrepublic" target="_blank">Twitter</a> and <a href="https://plus.google.com/u/0/106987116359359710902" target="_blank">Google+</a> for the <i>latest</i> updates.</span></p>
+    <div class="footer">
+        <div class="bottom-menu">
+        	<a href="https://www.tutorialrepublic.com/" class="logo-footer">
+            	<img src="./refference_files/Bootstrap 3 forms_files/logo-transparent.png" width="257" height="48" alt="Tutorial Republic">
+            </a>
+            <p class="copyright-text">Copyright © 2017 Tutorial Republic</p>
+            <ul>
+                <li><a href="https://www.tutorialrepublic.com/terms-of-use.php">Terms of Use</a></li>
+                <li><a href="https://www.tutorialrepublic.com/privacy-policy.php">Privacy Policy</a></li>
+				<li><a class="feedback" href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php#feedback">Report Error</a></li>
+                <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-forms.php#top" target="_top">Top</a></li>
+            </ul>
+            <div class="clear">&nbsp;</div>
+        </div>
+        <p class="tools-list" id="tools">
+            <strong>Interactive Tools<span>:</span></strong> 
+            <a href="https://www.tutorialrepublic.com/codelab.php?topic=html&amp;file=hello-world" target="_blank">HTML Editor</a><span>,</span> 
+			<a href="https://www.tutorialrepublic.com/codelab.php?topic=sql&amp;file=select-all" target="_blank">SQL Playground</a><span>,</span>
+            <a href="https://www.tutorialrepublic.com/html-reference/html-color-picker.php">Color Picker</a><span>,</span>
+            <a href="https://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php" target="_blank">Bootstrap Button Generator</a><span>,</span><br> 
+            <a href="https://www.tutorialrepublic.com/html-tutorial/html-url-encode.php#url-encoder">URL Encoder</a><span>,</span>            
+            <a href="https://www.tutorialrepublic.com/faq/how-to-find-number-of-characters-in-a-string-using-jquery.php#string-length-calculator">String Length Calculator</a><span>,</span>
+			<a href="https://www.tutorialrepublic.com/faq/what-is-the-maximum-length-of-title-and-meta-description-tag.php">Title &amp; Meta Length Calculator</a><span>.</span>
+        </p>
+
+    </div>
+</div>
+
+<div class="backdrop mobile-only"></div>
+
+<!-- TutorialRepublic base script -->
+<script type="text/javascript">
+[
+  'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+  '/lib/js/default-2.7.js'
+].forEach(function(src) {
+  var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = false; // important
+    script.src = src;
+  (document.getElementsByTagName('body')[0]).appendChild(script);
+});
+</script><script type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/jquery.min.js"></script><script type="text/javascript" src="./refference_files/Bootstrap 3 forms_files/default-2.7.js"></script>
+
+<!-- Social widget (footer section) -->
+<div class="social-widget">
+	<a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-forms.php" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Facebook"></a>
+	<a id="twitter-share-btn" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Twitter" href="https://twitter.com/share?text=How%20to%20Create%20Form%20Layouts%20with%20Bootstrap%203%20-%20&amp;amp;url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-forms.php"></a>
+	<a id="google-share-btn" href="https://plus.google.com/share?url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-forms.php" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;" title="Share on Google+"></a>
+	<a id="facebook-like-btn" title="Like Us on Facebook"><span id="like-container"></span></a>
+</div>
+<script>
+	var title = document.title.replace('Tutorial Republic', '');
+	document.getElementById('twitter-share-btn').href = 'https://twitter.com/share?text=' + title + '&amp;url=https://www.tutorialrepublic.com%2Ftwitter-bootstrap-tutorial%2Fbootstrap-forms.php';
+</script>
+    <!--End:Footer-->
+
+<!-- InstanceEnd --><iframe id="google_osd_static_frame_5242409728237" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./refference_files/Bootstrap 3 forms_files/saved_resource.html"></iframe></body></html>
