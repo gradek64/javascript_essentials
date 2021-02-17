@@ -1,0 +1,17 @@
+
+1. Create function that would find all unique words (no duplicates) based on space, 
+Space and coma, space and dot , make it so it accepts any string 
+
+2. Make your own reduce function as 
+
+	[1,2,3].reduce((acc,el)=>acc+el) 
+	
+	make your own version with pure java script 
+
+3. Make reduce version that uses same reducer as for sum as above and create this 
+Output ['1-ben','2-greg'] reduce from the object 
+
+	const students = [{id:1,c
+         		name:'ben'},
+			{id:2,
+        		 name:'greg'}]	

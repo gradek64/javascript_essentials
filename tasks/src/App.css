@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'open-sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url('./OpenSans-Regular.woff2') format('woff2');
+}
+
+body {
+  background-color: #d2d2d2;
+  justify-content: center;
+  display: grid;
+  font-family: 'open sans';
+  font-weight: bold;
+}
+::placeholder {
+  color: white;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(1, 120px 302px);
+  column-gap: 3%;
+  row-gap: 3%;
+  background-color: white;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.product-list table {
+  border-collapse: collapse;
+  border: 1px solid #626a80;
+}
+
+.product-list thead,
+.product-list tfoot {
+  color: #ffffff;
+}
+
+.product-list tbody,
+.product-list p {
+  color: #ffffff;
+}
+
+.product-list th,
+.product-list td {
+  border: 1px solid #626a80;
+  padding: 5px;
+}
+
+.product-list th {
+  background-color: #eb008c;
+}
+
+.product-list th:first-child {
+  width: 300px;
+}
+
+.product-list th:last-child {
+  width: 100px;
+}
+
+.product-list tr:nth-child(2n) {
+  background-color: #21242c;
+}
+
+.product-list tr:nth-child(2n + 1) {
+  background-color: #2a2f3d;
+}
+
+.product-list td:last-child {
+  text-align: right;
+}
+.product-list label,
+.product-list input {
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 3px 8px;
+  background-color: #eb008c;
+  color: #ffffff;
+  border: 1px solid #eb008c;
+  border-radius: 4px;
+  line-height: 24px;
+  outline: none;
+  width: 90%;
+}
+
+.product-list label {
+  white-space: nowrap;
+  border: none;
+  padding: 3px;
+  color: #eb008c;
+  background-color: white;
+}
+
+/* scrolling tbody */
+tbody {
+  display: block;
+  height: 250px;
+  overflow: auto;
+  background-image: url(./images/wowcherLogo.png);
+  background-size: 10% auto;
+}
+thead,
+tfoot,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+tfoot tr th:first-child {
+  text-align: left;
+}
